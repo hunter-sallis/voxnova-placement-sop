@@ -1,0 +1,5065 @@
+<!doctype html><html lang=en><head><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=robots content="noindex,nofollow">
+<title>Producer Placement Operations &mdash; Keyman</title>
+<meta property="og:title" content="Producer Placement Operations — Keyman">
+<meta property="og:description" content="Standard operating procedure · Keyman Publishing, LLC · licensed to Vox Nova, LLC">
+<link rel=preconnect href="https://fonts.googleapis.com"><link rel=preconnect href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel=stylesheet>
+<style>
+:root{--ink:oklch(0.17 0.008 25);--sub:oklch(0.43 0.012 25);--faint:oklch(0.60 0.010 25);--paper:#fff;--cream:oklch(0.985 0.002 25);--cream2:oklch(0.958 0.006 25);--line:oklch(0.89 0.008 25);
+ --acc:oklch(0.56 0.22 28);--acc-dk:oklch(0.48 0.19 28);--acc-soft:oklch(0.965 0.02 28);--ftr:oklch(0.12 0.008 215)}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 "Manrope",system-ui,-apple-system,Segoe UI,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none;font-weight:600} a:hover{color:var(--acc-dk);text-decoration:underline}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.hdr{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.97);backdrop-filter:saturate(180%) blur(8px);border-bottom:1px solid var(--line)}
+.hdr .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0 6px}
+.wm{font:500 25px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:.06em;color:var(--acc)}
+.wm-sub{font:700 9px/1 "Manrope",sans-serif;letter-spacing:.26em;text-transform:uppercase;color:var(--sub);margin-top:5px}
+.hdr-r{text-align:right;font:700 9.5px/1.7 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--sub)}
+.badge{display:inline-block;border:1px solid var(--line);color:var(--sub);border-radius:3px;padding:5px 9px;font:700 9px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-top:4px}
+.tabs{display:flex;gap:2px;overflow-x:auto;padding-bottom:2px}
+.tab{background:none;border:0;border-bottom:2px solid transparent;padding:10px 14px;font:700 11px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--sub);cursor:pointer;white-space:nowrap}
+.tab[aria-selected=true]{color:var(--acc);border-bottom-color:var(--acc)} .tab:hover{color:var(--ink)}
+.panel{display:none;padding:36px 0 64px} .panel.active{display:block}
+.eyebrow{font:700 10px/1 "Manrope",sans-serif;letter-spacing:.23em;text-transform:uppercase;color:var(--acc);margin:0 0 10px}
+h1{font:500 clamp(34px,4.2vw,50px)/1.06 "Cormorant Garamond",Georgia,serif;letter-spacing:-.025em;margin:0}
+h1 small{display:block;font:500 clamp(17px,2vw,22px)/1.3 "Cormorant Garamond",Georgia,serif;letter-spacing:-.01em;color:var(--sub);margin-top:8px}
+h2{font:500 clamp(24px,2.7vw,32px)/1.15 "Cormorant Garamond",Georgia,serif;letter-spacing:-.02em;margin:0}
+.rule{width:52px;height:2px;background:var(--acc);margin:14px 0 18px}
+.sub{color:var(--sub);font-size:14px} .sm{font-size:12.5px;color:var(--sub)}
+.legal{font:500 13.5px/1.5 "Manrope",sans-serif;color:var(--sub);margin-top:12px} .legal b{color:var(--ink);font-weight:600}
+.finding{margin-top:28px;padding:22px 26px;background:var(--cream);border-left:2px solid var(--acc)}
+.finding p{margin:0;font:500 clamp(17px,1.8vw,21px)/1.45 "Cormorant Garamond",Georgia,serif}
+.finding .n{margin-top:10px;font:500 12.5px/1.5 "Manrope",sans-serif;color:var(--sub)}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:28px}
+.kpi{padding:20px 16px;border-left:1px solid var(--line)} .kpi:first-child{border-left:0}
+.kpi .l{font:700 9px/1.4 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);min-height:26px}
+.kpi .v{font:500 34px/1 "Cormorant Garamond",Georgia,serif;letter-spacing:-.025em;margin:8px 0 6px;font-variant-numeric:lining-nums tabular-nums}
+.kpi .d{font-size:11.5px;color:var(--sub);line-height:1.45}
+.sec{margin-top:44px}
+.steps{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 32px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:8px;padding:12px 0;border-bottom:1px solid var(--line);counter-increment:s}
+.steps li:before{content:counter(s,decimal-leading-zero);font:500 22px/1 "Cormorant Garamond",Georgia,serif;color:var(--acc);font-variant-numeric:lining-nums}
+.steps b{display:block;font:700 11px/1.3 "Manrope",sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.steps span{font-size:13px;color:var(--sub)} .steps li.gate b{color:var(--acc)}
+.loop{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.loop div{flex:1 1 160px;border:1px solid var(--line);border-radius:5px;padding:14px 16px}
+.loop b{display:block;font:500 24px/1 "Cormorant Garamond",Georgia,serif;color:var(--acc);margin-bottom:6px}
+.loop span{font-size:12.5px;color:var(--sub)}
+.catgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:18px}
+.cat{display:block;background:#fff;border:1px solid var(--line);border-radius:5px;padding:16px 16px 14px;color:var(--ink);font-weight:400}
+.cat:hover{border-color:var(--ink);text-decoration:none;color:var(--ink)}
+.cat .n{display:block;font:500 28px/1 "Cormorant Garamond",Georgia,serif;color:var(--acc);margin-bottom:6px;font-variant-numeric:lining-nums}
+.cat .t{display:block;font-weight:700;font-size:13.5px;line-height:1.3}
+.cat .d{display:block;font-size:11.5px;color:var(--sub);line-height:1.45;margin-top:5px}
+details.card{border:1px solid var(--line);border-radius:5px;margin-top:12px;background:#fff}
+details.card>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:52px 1fr auto;gap:12px;align-items:center;padding:16px 20px}
+details.card>summary::-webkit-details-marker{display:none}
+details.card>summary .n{font:500 28px/1 "Cormorant Garamond",Georgia,serif;color:var(--acc);font-variant-numeric:lining-nums}
+details.card>summary .t{font:500 21px/1.2 "Cormorant Garamond",Georgia,serif}
+details.card>summary .x{font:700 9px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--sub)}
+details.card[open]>summary{border-bottom:1px solid var(--line);background:var(--cream)}
+details.card[open]>summary .x:after{content:" ▲"} details.card:not([open])>summary .x:after{content:" ▼"}
+.doc{padding:8px 24px 22px;overflow-wrap:anywhere}
+.doc h2{font:500 22px/1.2 "Cormorant Garamond",Georgia,serif;margin:22px 0 4px;padding-top:12px;border-top:1px solid var(--line)}
+.doc h2:first-child{border-top:0}
+.doc h3{font:700 11px/1.3 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin:18px 0 6px}
+.doc p,.doc li{font-size:14px} .doc ul,.doc ol{padding-left:22px}
+.doc table{border-collapse:collapse;width:100%;margin:10px 0 14px;font-size:13px;display:block;overflow-x:auto}
+.doc th{font:700 9.5px/1.4 "Manrope",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--sub);text-align:left;border-bottom:2px solid var(--ink);padding:8px 10px;white-space:nowrap}
+.doc td{border-bottom:1px solid var(--line);padding:8px 10px;vertical-align:top}
+.doc code{font:12px/1.4 ui-monospace,Menlo,monospace;background:var(--cream2);padding:1px 4px;border-radius:3px}
+.doc pre{background:var(--cream);border:1px solid var(--line);border-left:2px solid var(--acc);padding:12px 14px;overflow-x:auto;font-size:12px;line-height:1.45}
+.doc pre code{background:none;padding:0}
+.doc blockquote{margin:14px 0;padding:12px 18px;background:var(--acc-soft);border-left:2px solid var(--acc)}
+.doc blockquote p{margin:4px 0;font:500 18px/1.4 "Cormorant Garamond",Georgia,serif}
+.doc hr{border:0;border-top:1px dashed var(--line);margin:18px 0}
+.sop{display:grid;grid-template-columns:230px 1fr;gap:36px;margin-top:10px}
+.toc{position:sticky;top:120px;align-self:start;max-height:calc(100vh - 140px);overflow:auto;font-size:13px}
+.toc b{display:block;font:700 9.5px/1 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin:16px 0 6px}
+.toc a{display:block;color:var(--sub);font-weight:500;padding:3px 0} .toc a:hover{color:var(--ink)}
+.sopsec{border-top:1px solid var(--line);padding-top:8px;margin-top:26px;scroll-margin-top:120px}
+.sopsec .src{font:700 9px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:14px 0 0}
+.sopsec .doc{padding:0}
+.dl{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+.dl a{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);border-radius:5px;padding:14px 16px;color:var(--ink);font-weight:600}
+.dl a:hover{border-color:var(--ink);text-decoration:none}
+.dl a span{font:700 9px/1 "Manrope",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#fff;background:var(--acc);border-radius:4px;padding:7px 10px;white-space:nowrap}
+.dl a.main{grid-column:1/-1;background:var(--cream)}
+footer{background:var(--ftr);color:#cfd3d6;padding:34px 0;margin-top:30px}
+footer .wm{color:#fff} footer p{margin:8px 0 0;font-size:12.5px;line-height:1.6;color:#aeb4b8}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(odd){border-left:0}.catgrid{grid-template-columns:repeat(2,1fr)}.sop{grid-template-columns:1fr}.toc{position:static;max-height:none}.steps{grid-template-columns:1fr}.dl{grid-template-columns:1fr}}
+@media (max-width:560px){.wrap{padding:0 16px}.hdr-r{display:none}.catgrid{grid-template-columns:1fr}.doc{padding:6px 14px 18px}details.card>summary{grid-template-columns:40px 1fr;padding:14px}details.card>summary .x{display:none}}
+</style></head><body>
+<header class="hdr"><div class="wrap">
+ <div class="top"><div><div class="wm">KEYMAN</div><div class="wm-sub">Music Metadata Consultant</div></div>
+ <div class="hdr-r">Licensed to Vox Nova, LLC<br><span class="badge">v1.0 · 2026-09-30 · rev 1</span></div></div>
+ <nav class="tabs" role="tablist">
+  <button class="tab" role="tab" data-p="overview">Overview</button>
+  <button class="tab" role="tab" data-p="cards">Employee Cards</button>
+  <button class="tab" role="tab" data-p="sop">Master SOP</button>
+  <button class="tab" role="tab" data-p="downloads">Downloads</button>
+ </nav></div></header>
+<main class="wrap">
+
+<section class="panel" id="overview">
+ <p class="eyebrow">Standard Operating Procedure</p>
+ <h1>Producer Placement Operations<small>From the first placement email to contracted, paid and SoundExchange-active, with proof at every step.</small></h1>
+ <div class="rule"></div>
+ <p class="legal"><b>Keyman Publishing, LLC</b> · licensed to <b>Vox Nova, LLC</b> for its internal placement operations. These are operations controls, not legal, tax or accounting advice.</p>
+ <div class="finding"><p>The artist's signed SoundExchange Letter of Direction, with its certificate of completion, must be received <b>before</b> the producer signs the producer agreement.</p>
+ <p class="n">Once the producer signs, the artist side has no reason to hurry on the LOD, so the producer's signature is held at the LOD gate.</p></div>
+ <div class="kpis">
+  <div class="kpi"><div class="l">Lifecycle stages</div><div class="v">12</div><div class="d">Intake → closeout</div></div>
+  <div class="kpi"><div class="l">Employee cards</div><div class="v">13</div><div class="d">Short, one topic each</div></div>
+  <div class="kpi"><div class="l">Email templates</div><div class="v">10</div><div class="d">Fill in from the record</div></div>
+  <div class="kpi"><div class="l">Escalation triggers</div><div class="v">16</div><div class="d">Stop → document → escalate</div></div>
+  <div class="kpi"><div class="l">Follow-up clock</div><div class="v">3·3·2</div><div class="d">Business days to #1, final, escalate</div></div>
+ </div>
+ <div class="sec"><p class="eyebrow">The employee loop</p><h2>See → Act → Prove → Advance</h2><div class="rule"></div>
+  <div class="loop"><div><b>See</b><span>What am I looking at? Which stage is it in?</span></div><div><b>Act</b><span>What's missing? Do the next step on the card.</span></div>
+  <div><b>Prove</b><span>Save the document that proves it happened.</span></div><div><b>Advance</b><span>Move the stage only when the proof is saved.</span></div></div>
+  <p class="sub" style="margin-top:14px">A request is not proof. "Sent," "signed" and "OK to pay" are claims; the document is the proof.</p></div>
+ <div class="sec"><p class="eyebrow">Placement lifecycle</p><h2>Twelve stages, one gate</h2><div class="rule"></div><ol class="steps"><li class=""><div><b>Intake</b><span>Something came in</span></div></li><li class=""><div><b>Terms</b><span>Confirmed in writing by every producer</span></div></li><li class=""><div><b>Contract</b><span>Checked line by line against the terms</span></div></li><li class="gate"><div><b>Artist LOD</b><span>Artist signs the SoundExchange LOD first</span></div></li><li class="gate"><div><b>Signature</b><span>Only then does the producer sign</span></div></li><li class=""><div><b>Vendor setup</b><span>Starts early, at Terms</span></div></li><li class=""><div><b>Invoice</b><span>After full execution</span></div></li><li class=""><div><b>Payment</b><span>Remittance or bank proof only</span></div></li><li class=""><div><b>SoundExchange</b><span>Submitted and confirmed active</span></div></li><li class=""><div><b>Release</b><span>Tracked the whole time</span></div></li><li class=""><div><b>Reconciliation</b><span>Received = invoice = agreement</span></div></li><li class=""><div><b>Closeout</b><span>Six-month test passes</span></div></li></ol></div>
+ <div class="sec"><p class="eyebrow">Employee cards</p><h2>The thirteen cards</h2><div class="rule"></div>
+  <p class="sub">Employees work from the cards. The master SOP holds the full rules and evidence standards; if they ever disagree, the SOP wins.</p>
+  <div class="catgrid"><a class="cat" href="#card-01" data-go="cards:card-01"><span class="n">01</span><span class="t">Placement Overview</span><span class="d">Your job, the loop, the lifecycle</span></a><a class="cat" href="#card-02" data-go="cards:card-02"><span class="n">02</span><span class="t">New Placement Intake</span><span class="d">Something new came in</span></a><a class="cat" href="#card-03" data-go="cards:card-03"><span class="n">03</span><span class="t">Deal Terms Checklist</span><span class="d">Green / yellow / red terms</span></a><a class="cat" href="#card-04" data-go="cards:card-04"><span class="n">04</span><span class="t">Contract &amp; Signature Checklist</span><span class="d">Check, hold for LOD, then sign</span></a><a class="cat" href="#card-05" data-go="cards:card-05"><span class="n">05</span><span class="t">Invoice &amp; Payment Checklist</span><span class="d">Vendor → invoice → confirmed</span></a><a class="cat" href="#card-06" data-go="cards:card-06"><span class="n">06</span><span class="t">LOD / SoundExchange Checklist</span><span class="d">Artist signs first; certificate check</span></a><a class="cat" href="#card-07" data-go="cards:card-07"><span class="n">07</span><span class="t">Release Tracking Checklist</span><span class="d">Release countdown &amp; gate</span></a><a class="cat" href="#card-08" data-go="cards:card-08"><span class="n">08</span><span class="t">Follow-Up Templates</span><span class="d">10 emails + the follow-up clock</span></a><a class="cat" href="#card-09" data-go="cards:card-09"><span class="n">09</span><span class="t">Common Problems &amp; Escalations</span><span class="d">Stop → document → escalate</span></a><a class="cat" href="#card-10" data-go="cards:card-10"><span class="n">10</span><span class="t">Placement Closeout</span><span class="d">Reconcile and close</span></a><a class="cat" href="#card-11" data-go="cards:card-11"><span class="n">11</span><span class="t">Employee Do / Don&#x27;t</span><span class="d">Rules before your first placement</span></a><a class="cat" href="#card-12" data-go="cards:card-12"><span class="n">12</span><span class="t">Placement Record Template</span><span class="d">The master placement record</span></a><a class="cat" href="#card-13" data-go="cards:card-13"><span class="n">13</span><span class="t">Manager / Admin Reference</span><span class="d">Settings, decisions, weekly review</span></a></div></div>
+</section>
+
+<section class="panel" id="cards">
+ <p class="eyebrow">Employee cards</p><h2>Producer placement playbook</h2><div class="rule"></div>
+ <p class="sub">Open a card to read it, or download the PDF to print it.</p>
+ <details class="card" id="card-01"><summary><span class="n">01</span><span class="t">Placement Overview</span><span class="x">Open</span></summary><div class="doc"><h2>Your job</h2>
+<p>Your job is <strong>not</strong> to negotiate the placement.</p>
+<p>Your job is to <strong>track what happened, collect the proof, do the next approved step, and keep the placement moving.</strong></p>
+<h2>The loop you run every time</h2>
+<blockquote>
+<p><strong>SEE → ACT → PROVE → ADVANCE</strong></p>
+</blockquote>
+<ol>
+<li><strong>SEE</strong> — What am I looking at? Which stage is the placement in?</li>
+<li><strong>ACT</strong> — What's missing? Do the next step on the card for that stage.</li>
+<li><strong>PROVE</strong> — Save the document that proves it happened.</li>
+<li><strong>ADVANCE</strong> — Move the stage forward only when the proof is saved.</li>
+</ol>
+<p>When a card says 🚨, you <strong>STOP → DOCUMENT → ESCALATE</strong> (card 09).</p>
+<h2>Placement lifecycle</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Stage</th>
+<th>What happens</th>
+<th>Card</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>INTAKE</strong></td>
+<td>Something came in</td>
+<td>02</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>TERMS</strong></td>
+<td>Advance, points, publishing, credit, splits, all confirmed in writing</td>
+<td>03</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>CONTRACT</strong></td>
+<td>Agreement received and checked against the terms</td>
+<td>04</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>ARTIST LOD</strong></td>
+<td>The artist signs the SoundExchange LOD <strong>first</strong></td>
+<td>06</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>SIGNATURE</strong></td>
+<td>Only then does the producer sign; then everyone signs</td>
+<td>04</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>VENDOR SETUP</strong></td>
+<td>Label payment paperwork (start early, at TERMS)</td>
+<td>05</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>INVOICE</strong></td>
+<td>Sent after the agreement is fully executed</td>
+<td>05</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>PAYMENT</strong></td>
+<td>Confirmed only by remittance or bank proof</td>
+<td>05</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>SOUNDEXCHANGE</strong></td>
+<td>LOD submitted and confirmed active</td>
+<td>06</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>RELEASE</strong></td>
+<td>Tracked the whole time; checked before release</td>
+<td>07</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>RECONCILIATION</strong></td>
+<td>Amounts received match the agreement</td>
+<td>10</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>CLOSEOUT</strong></td>
+<td>Every box checked, placement CLOSED</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<h2>The rule that changes the order</h2>
+<blockquote>
+<p><strong>The artist signs the SoundExchange Letter of Direction BEFORE the producer signs the producer agreement.</strong></p>
+<p>Once the producer signs, the artist side has no reason to hurry on the LOD. So the producer's signature waits.</p>
+</blockquote>
+<h2>Three sentences to remember</h2>
+<ul>
+<li><strong>A request is not proof.</strong> "Sent," "signed," and "OK to pay" are claims. The document is the proof.</li>
+<li><strong>Never choose between two versions.</strong> If two documents say different things, 🚨 escalate.</li>
+<li><strong>Never touch money or signatures.</strong> You don't sign, send bank details, or agree to terms.</li>
+</ul>
+<h2>The cards</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Card</th>
+<th>Use it when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>02</td>
+<td>New Placement Intake</td>
+<td>Something new comes in</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Deal Terms Checklist</td>
+<td>Terms arrive or change</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Contract &amp; Signature Checklist</td>
+<td>A draft or signature request arrives</td>
+</tr>
+<tr>
+<td>05</td>
+<td>Invoice &amp; Payment Checklist</td>
+<td>Vendor forms, invoices, payment</td>
+</tr>
+<tr>
+<td>06</td>
+<td>LOD / SoundExchange Checklist</td>
+<td>From contract through SoundExchange confirmation</td>
+</tr>
+<tr>
+<td>07</td>
+<td>Release Tracking Checklist</td>
+<td>Any time a release date is known</td>
+</tr>
+<tr>
+<td>08</td>
+<td>Follow-Up Templates</td>
+<td>Anyone owes you something</td>
+</tr>
+<tr>
+<td>09</td>
+<td>Common Problems &amp; Escalations</td>
+<td>Anything feels off</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Placement Closeout</td>
+<td>Final checks</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Employee Do / Don't</td>
+<td>Before your first placement</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Placement Record Template</td>
+<td>Every placement</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Manager/Admin Reference</td>
+<td>Managers only</td>
+</tr>
+</tbody>
+</table><p class="sm"><a href="downloads/cards/01-placement-overview.pdf">Download card 01 (PDF)</a></p></div></details><details class="card" id="card-02"><summary><span class="n">02</span><span class="t">New Placement Intake</span><span class="x">Open</span></summary><div class="doc"><p><strong>Use when:</strong> an email, text, file, or message says a producer's beat is being used, or a label/attorney asks about a producer.</p>
+<p><strong>Do it:</strong> the same business day it arrives.</p>
+<h2>Step 1 — Check it isn't already in the system</h2>
+<p>Search the placement tracker for the <strong>artist</strong>, <strong>song</strong>, and any <strong>other spelling</strong> of the title ("Luv U" / "Love You").</p>
+<ul>
+<li>Found → add this email to that placement. <strong>Don't create a second one.</strong></li>
+<li>Watch for <strong>same title, different song.</strong> Check the artist and date.</li>
+</ul>
+<h2>Step 2 — Create the placement</h2>
+<p>Placement ID: <strong>KM-YYYY-NNNN</strong> (year + next number, e.g. KM-2026-0014)</p>
+<h3>Artist</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artist name</td>
+<td></td>
+</tr>
+<tr>
+<td>Song</td>
+<td></td>
+</tr>
+<tr>
+<td>Project</td>
+<td>album / EP / single / UNKNOWN</td>
+</tr>
+<tr>
+<td>Label</td>
+<td></td>
+</tr>
+<tr>
+<td>Manager</td>
+<td></td>
+</tr>
+<tr>
+<td>A&amp;R</td>
+<td></td>
+</tr>
+<tr>
+<td>Producer(s)</td>
+<td>every producer named</td>
+</tr>
+</tbody>
+</table>
+<h3>Placement</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Placement date</td>
+<td>date of first evidence</td>
+</tr>
+<tr>
+<td>How it started</td>
+<td>who sent what (label email, attorney, artist, audio file…)</td>
+</tr>
+<tr>
+<td>Current stage</td>
+<td>INTAKE</td>
+</tr>
+<tr>
+<td>Owner</td>
+<td>you</td>
+</tr>
+<tr>
+<td>Priority</td>
+<td>🔴 release date known / 🟡 terms in hand / 🟢 early</td>
+</tr>
+</tbody>
+</table>
+<h3>Evidence (save at least one)</h3>
+<p>☐ Email  ☐ Text  ☐ Contract  ☐ Beat/stem delivery  ☐ Deal memo  ☐ Other: ______<br />
+Save it to the placement folder: <code>99_Correspondence/YYYY-MM-DD_&lt;subject&gt;.pdf</code></p>
+<h2>Step 3 — Are there terms in writing?</h2>
+<table>
+<thead>
+<tr>
+<th>What you have</th>
+<th>Stage</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advance / points / publishing written in an email or document</td>
+<td><strong>TERMS</strong></td>
+<td>Card 03</td>
+</tr>
+<tr>
+<td>Only an audio file, a title, or "we're using the beat"</td>
+<td><strong>INTAKE — UNPAPERED</strong></td>
+<td>Send Email 07 (Paperwork Request) from card 08. Recheck weekly.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>UNPAPERED means we don't assume a deal exists.</strong> Fill in "What should be verified next" on the record.</p>
+<h2>Done when</h2>
+<p>☐ Placement ID created ☐ All known fields filled (UNKNOWN for the rest) ☐ Evidence saved ☐ Next action + due date set  </p><p class="sm"><a href="downloads/cards/02-new-placement-intake.pdf">Download card 02 (PDF)</a></p></div></details><details class="card" id="card-03"><summary><span class="n">03</span><span class="t">Deal Terms Checklist</span><span class="x">Open</span></summary><div class="doc"><p><strong>Use when:</strong> terms arrive, or any email changes a number.</p>
+<h2>Step 1 — Fill in the terms snapshot</h2>
+<p>Copy the <strong>exact sentence</strong> for each term into the record, with the email date. Label it <strong>TS-1</strong>. If terms change later, make <strong>TS-2</strong>. <strong>Never overwrite TS-1.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What to write</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advance</td>
+<td>Total $, and "all-in" yes/no</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Producer split</td>
+<td>Each producer's share of the advance</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Producer points</td>
+<td>Total points/royalty + each producer's share</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Publishing</td>
+<td>Our producer's % — and does it say <strong>each</strong> or <strong>total</strong>?</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Credit</td>
+<td>Exact wording ("Produced by X &amp; Y")</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Master rights</td>
+<td>Who gets rights to the recording, if stated</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Exclusivity</td>
+<td>Any exclusive-use language, if stated</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Payment party</td>
+<td>Who pays (label/company) and who gets paid (producer's company)</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Samples</td>
+<td>Producer's written answer: none, or a list</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+<tr>
+<td>Other collaborators</td>
+<td>Producer's written answer: none, or names</td>
+<td>🟢 / 🟡 / 🔴</td>
+</tr>
+</tbody>
+</table>
+<h3>What the colors mean</h3>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Means</th>
+<th>Your action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🟢 <strong>Confirmed</strong></td>
+<td>Written down <strong>and</strong> confirmed in writing by every producer</td>
+<td>Continue</td>
+</tr>
+<tr>
+<td>🟡 <strong>Missing</strong></td>
+<td>Not stated anywhere yet, or unclear ("25%" without saying each/total)</td>
+<td>Find it: ask using Email 08 (Terms Confirmation)</td>
+</tr>
+<tr>
+<td>🔴 <strong>Conflict</strong></td>
+<td>Two emails or documents say different things</td>
+<td>🚨 <strong>Escalate. Do not pick one.</strong></td>
+</tr>
+</tbody>
+</table>
+<h2>Step 2 — Get confirmations in writing</h2>
+<p>☐ Our producer confirmed TS-__ in writing<br />
+☐ Each co-producer's team confirmed the split in writing<br />
+☐ Producer answered: samples? <strong><em>_</em>_<br />
+☐ Producer answered: other collaborators? </strong>____<br />
+"Looks good" on a different email, a call, or an emoji <strong>does not count.</strong> Ask again, quoting the terms.</p>
+<h2>🚨 Escalate immediately if</h2>
+<ul>
+<li>any 🔴</li>
+<li>a new producer, writer, or collaborator appears</li>
+<li>a sample or interpolation is mentioned</li>
+<li>a co-producer's team won't confirm the split (this once stalled a contract for 63 days)</li>
+</ul>
+<h2>Done when</h2>
+<p>Every row 🟢 → stage = <strong>CONTRACT</strong> → send the contracting info (Email 09) → card 04.
+Also start <strong>vendor setup</strong> now (card 05, Part A).</p><p class="sm"><a href="downloads/cards/03-deal-terms-checklist.pdf">Download card 03 (PDF)</a></p></div></details><details class="card" id="card-04"><summary><span class="n">04</span><span class="t">Contract &amp; Signature Checklist</span><span class="x">Open</span></summary><div class="doc"><blockquote>
+<p><strong>KEYMAN RULE: A signature request is not proof of execution.</strong></p>
+</blockquote>
+<h2>Part A — Check the agreement (before anyone signs)</h2>
+<p>Put the agreement next to the confirmed terms (card 03). Check every line <strong>matches exactly</strong>.</p>
+<p>☐ Correct artist and song<br />
+☐ Correct producer name (spelled right)<br />
+☐ Correct advance<br />
+☐ Correct royalty / points<br />
+☐ Correct publishing<br />
+☐ Correct credit<br />
+☐ Correct company name and payment information<br />
+☐ Correct signature blocks (right people, right companies)<br />
+☐ No page or exhibit says "to be provided separately" or is blank<br />
+☐ SoundExchange LOD included, with the correct payee and %<br />
+Anything different or missing → 🚨 <strong>Escalate.</strong> Don't send the producer's signature.</p>
+<h2>Part B — The LOD comes first</h2>
+<p>☐ <strong>Artist-signed LOD received</strong><br />
+☐ <strong>LOD certificate of completion received and checked</strong> (card 06)<br />
+<strong>Until both boxes are checked, the producer does not sign.</strong>
+Tell the producer and their attorney in writing: <em>"Please hold signature until the artist's signed LOD and certificate are in."</em>
+If anyone pushes for the producer to sign first → 🚨 <strong>Escalate.</strong></p>
+<h2>Part C — After the LOD is in: signatures</h2>
+<p>☐ Producer signed (e-signature with certificate, or scanned ink — <strong>not</strong> a pasted image)<br />
+☐ The other side <strong>confirmed they received</strong> the producer's pages (ask after 2 business days; signed pages have gone missing for weeks)<br />
+☐ Other producer(s) signed<br />
+☐ Label / artist signed<br />
+☐ Every extra signature page signed (guarantee letters, payment letters, exhibits)<br />
+☐ <strong>Fully executed copy received</strong> — every signature line signed<br />
+☐ Executed copy uploaded to the placement (<code>03_Agreement/fully-executed/</code>)  </p>
+<h2>What doesn't count</h2>
+<table>
+<thead>
+<tr>
+<th>They say</th>
+<th>What it actually is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Sending the contract now"</td>
+<td>Nothing yet</td>
+</tr>
+<tr>
+<td>"He signed it"</td>
+<td>Nothing until the PDF is saved</td>
+</tr>
+<tr>
+<td>A copy signed by the producers only</td>
+<td>Partially executed, <strong>not</strong> done</td>
+</tr>
+<tr>
+<td>"OK to pay" / "we'll circle back with the executed copy"</td>
+<td>Not fully executed</td>
+</tr>
+</tbody>
+</table>
+<h2>Clocks</h2>
+<ul>
+<li>No fully executed copy <strong>10 business days</strong> after the producer signed → Email 01 (Executed Agreement)</li>
+<li>Then the standard follow-up clock (card 08)</li>
+</ul>
+<h2>Done when</h2>
+<p>Fully executed PDF saved → stage = <strong>INVOICE</strong> (card 05) and <strong>SOUNDEXCHANGE</strong> (card 06).</p><p class="sm"><a href="downloads/cards/04-contract-signature-checklist.pdf">Download card 04 (PDF)</a></p></div></details><details class="card" id="card-05"><summary><span class="n">05</span><span class="t">Invoice &amp; Payment Checklist</span><span class="x">Open</span></summary><div class="doc"><p>Our job is to <strong>track</strong> payment. The money goes to the producer's company. Vox Nova never receives, holds, or redirects it.</p>
+<h2>Payment status</h2>
+<pre><code>NOT INVOICED ──── vendor setup in progress
+      ↓
+INVOICE READY ─── vendor setup confirmed + ONE payment route + agreement fully executed
+      ↓
+INVOICE SENT ──── invoice sent and the label confirmed they received it
+      ↓
+PAYMENT PENDING ─ &quot;OK to pay&quot; / PO issued / &quot;should land by…&quot;   ← NOT paid
+      ↓
+PAYMENT CONFIRMED  remittance or bank record: amount + payer + date
+      ↓
+RECONCILED ────── amount = invoice = agreement; saved in the folder
+</code></pre>
+<h2>Part A — Vendor setup (start at TERMS)</h2>
+<p>☐ Asked the label which vendor/payee forms they need (Email 10)<br />
+☐ Got the forms from the label <strong>this time</strong> (old versions get rejected)<br />
+☐ Producer completed and signed them (e-signature or ink — no pasted images)<br />
+☐ Tax form is current and in the payee company's exact name<br />
+☐ Label confirmed in writing that the vendor record is <strong>approved</strong><br />
+"Looks good to submit" = still in progress.</p>
+<h2>Part B — One payment route</h2>
+<p>☐ Payee company on the invoice = payee in the agreement = vendor record<br />
+☐ Only <strong>one</strong> way this money is being paid<br />
+☐ Label confirmed the route in writing<br />
+A second payment letter, a new bank form, or a third party asking to be paid → 🚨 <strong>Escalate.</strong></p>
+<h2>Part C — Invoice &amp; payment card (one per payment)</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it's for</td>
+<td>☐ Producer advance ☐ Legal fee ☐ Other</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>$______ (<strong>from the fully executed agreement</strong>)</td>
+</tr>
+<tr>
+<td>Payer</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Payee company</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Invoice #</td>
+<td>______</td>
+</tr>
+<tr>
+<td>PO #</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Date sent</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Label confirmed receipt</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Expected payment</td>
+<td>______</td>
+</tr>
+<tr>
+<td>Payment evidence</td>
+<td>______</td>
+</tr>
+<tr>
+<td><strong>NEXT ACTION</strong></td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<h2>Clocks</h2>
+<ul>
+<li>Invoice sent, no receipt confirmation → standard clock (card 08)</li>
+<li>No payment <strong>10 business days</strong> after receipt was confirmed, or on the promised date → Email 02 (Payment Status)</li>
+<li>Co-producer got paid and ours didn't → Email 02 <strong>the same day</strong></li>
+</ul>
+<h2>Does NOT count as paid</h2>
+<p>"OK to pay" · PO issued · "should land Wednesday" · ACH notice with no amount · invoice sent · co-producer paid</p>
+<h2>🚨 Escalate if</h2>
+<p>amount received ≠ invoice · payer unclear · two payment routes · anyone asks you for bank details</p><p class="sm"><a href="downloads/cards/05-invoice-payment-checklist.pdf">Download card 05 (PDF)</a></p></div></details><details class="card" id="card-06"><summary><span class="n">06</span><span class="t">LOD / SoundExchange Checklist</span><span class="x">Open</span></summary><div class="doc"><p><strong>What it is:</strong> the <strong>artist</strong> signs a Letter of Direction (LOD) telling SoundExchange to pay part of the artist's digital-radio royalties to the producer's company. Only the artist can sign it.</p>
+<p><strong>Why it comes first:</strong> the producer's signature waits until the artist's LOD is in. That's the only leverage we have to get it.</p>
+<h2>Part A — Get the artist's LOD (before the producer signs)</h2>
+<p>☐ LOD requested from the artist's attorney/label (Email 03) — <strong>send it with the contracting info, not after release</strong><br />
+☐ Producer company + % on the LOD confirmed from the agreement<br />
+☐ Song title / recording information confirmed<br />
+☐ Producer + attorney told to <strong>hold signature</strong><br />
+☐ LOD sent to the artist for e-signature (save the notice)<br />
+☐ <strong>Artist-signed LOD PDF</strong> saved<br />
+☐ <strong>Certificate of completion</strong> saved  </p>
+<h2>Part B — Check the certificate (all must pass)</h2>
+<p>☐ It's the e-signature platform's own completion page (not a screenshot of an email)<br />
+☐ Document ID or document name matches the LOD<br />
+☐ Signer = the artist named on the LOD<br />
+☐ Status says <strong>Completed</strong>, with a date/time<br />
+☐ Signature is a real e-signature or ink, not a pasted image<br />
+☐ Payee company on the LOD = the agreement<br />
+☐ % on the LOD = the agreement<br />
+☐ Names and titles spelled correctly<br />
+<strong>All pass → the producer may sign</strong> (card 04, Part C).
+Any fail → Email 03, "correction" version. Wrong payee or % → 🚨 <strong>Escalate.</strong></p>
+<h2>Part C — After the agreement is fully executed</h2>
+<p>☐ Who submits the LOD to SoundExchange, confirmed in writing<br />
+☐ <strong>LOD submitted</strong> — proof saved (email, case number, or dated screenshot)<br />
+☐ <strong>Active at SoundExchange</strong> — SoundExchange email or dated portal screenshot<br />
+☐ Everything uploaded to <code>04_SoundExchange_LOD/</code><br />
+Check "active" every <strong>10 business days</strong>. Not active after <strong>3 checks</strong> → 🚨 Escalate.</p>
+<h2>What doesn't count</h2>
+<table>
+<thead>
+<tr>
+<th>They say / you have</th>
+<th>It is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"I sent the LOD"</td>
+<td>Sent — not signed</td>
+</tr>
+<tr>
+<td>"He signed it"</td>
+<td>Nothing until the PDF is saved</td>
+</tr>
+<tr>
+<td>Signed LOD, no certificate</td>
+<td>Not verified</td>
+</tr>
+<tr>
+<td>Signed LOD + certificate</td>
+<td>Verified — but <strong>not</strong> proof SoundExchange has it</td>
+</tr>
+</tbody>
+</table>
+<h2>If it's missing</h2>
+<p><strong>ACTION REQUIRED: Request LOD documentation</strong> → Email 03.</p><p class="sm"><a href="downloads/cards/06-lod-soundexchange-checklist.pdf">Download card 06 (PDF)</a></p></div></details><details class="card" id="card-07"><summary><span class="n">07</span><span class="t">Release Tracking Checklist</span><span class="x">Open</span></summary><div class="doc"><p>We <strong>track</strong> the release. We never tell a label whether it can release.
+Songs often come out before the paperwork is done. Our job is to spot that early and escalate.</p>
+<h2>When to check</h2>
+<ul>
+<li>As soon as a release date is known or changes</li>
+<li>Every Monday for any placement with a release date</li>
+<li><strong>Every day</strong> once release is <strong>10 business days</strong> away or less</li>
+<li>On release day</li>
+</ul>
+<h2>Release date</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release date</td>
+<td><strong><em>_-</em>_-</strong> ☐ announced ☐ actual</td>
+</tr>
+<tr>
+<td>Where it came from</td>
+<td>______ (save it to <code>07_Release/</code>)</td>
+</tr>
+<tr>
+<td>Business days away</td>
+<td>______</td>
+</tr>
+</tbody>
+</table>
+<p>If the release date is unknown: search the artist's socials/DSP pages and ask with Email 05. Record UNKNOWN until you have proof.</p>
+<h2>Release-ready check</h2>
+<p>☐ Terms confirmed (card 03 all 🟢)<br />
+☐ Every producer identified<br />
+☐ Publishing confirmed in the executed agreement<br />
+☐ Points confirmed in the executed agreement<br />
+☐ Samples cleared / confirmed none<br />
+☐ Other collaborators identified<br />
+☐ Artist LOD + certificate received <strong>before</strong> the producer signed<br />
+☐ Agreement fully executed<br />
+☐ Payment confirmed — or invoice + vendor + route done, and the manager has accepted in writing that payment will follow release<br />
+☐ LOD submitted to SoundExchange<br />
+☐ Documents saved<br />
+☐ No open escalation  </p>
+<h2>Result</h2>
+<p><strong>All checked →</strong> stage = <strong>RELEASE READY</strong></p>
+<p><strong>Anything unchecked →</strong></p>
+<pre><code>BLOCKED — DO NOT MARK RELEASE READY
+Missing: ______   Owner: ______
+Release: ____-__-__  (__ business days)
+</code></pre>
+<ul>
+<li>More than 10 business days out → keep working the follow-up clocks</li>
+<li><strong>10 business days or less → 🚨 Escalate the same day</strong></li>
+<li>Already released → mark <strong>RELEASED WITH OUTSTANDING ITEMS</strong>, list them, keep going</li>
+</ul>
+<p>Send the label an "open items" email <strong>only if your manager approves it.</strong></p><p class="sm"><a href="downloads/cards/07-release-tracking-checklist.pdf">Download card 07 (PDF)</a></p></div></details><details class="card" id="card-08"><summary><span class="n">08</span><span class="t">Follow-Up Templates</span><span class="x">Open</span></summary><div class="doc"><p><strong>How to use:</strong> replace every <strong>[bracket]</strong> with facts from the placement record. If a fact isn't in the record, don't guess. Leave it out or ask for it. Reply <strong>on the same email thread</strong> whenever you can. Sign every email:</p>
+<blockquote>
+<p>[Your name]
+Vox Nova Publishing, LLC</p>
+</blockquote>
+<h2>The follow-up clock (every request)</h2>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Request sent</td>
+<td>Log it on the record</td>
+</tr>
+<tr>
+<td><strong>+3 business days</strong>, no reply</td>
+<td>Follow-up #1: same template, same thread</td>
+</tr>
+<tr>
+<td><strong>+3 business days</strong> after #1</td>
+<td>Email 06 — Final Follow-Up (copy the producer's attorney)</td>
+</tr>
+<tr>
+<td><strong>+2 business days</strong> after #2</td>
+<td>🚨 Escalate. <strong>Never send a third follow-up yourself.</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Email 01 — Missing Contract</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Executed Agreement</p>
+<p>Hi [Name],</p>
+<p>[Producer]'s signed pages went over on [date]. Could you send the fully executed agreement, with all signatures, once it's countersigned?</p>
+<p>Thanks,</p>
+<hr />
+<h3>Email 02 — Payment Follow-Up</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Payment Status</p>
+<p>Hi [Name],</p>
+<p>Following up on invoice [#] for [amount], sent [date][, which you'd expected to pay by [date]]. Can you confirm whether it's been paid and send the remittance advice with the payment date and amount?</p>
+<p>Thanks,</p>
+<hr />
+<h3>Email 03 — LOD Request</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — SoundExchange / LOD</p>
+<p>Hi [Name],</p>
+<p>Per the producer agreement for "[Song]," please prepare the artist's SoundExchange Letter of Direction in favor of [payee company] at [% from agreement] and send it to [Artist legal name] for e-signature.</p>
+<p>Once it's completed, please send us the signed LOD and the e-signature certificate of completion. [Producer] will sign the producer agreement once both are received. Please also let us know who will submit it to SoundExchange.</p>
+<p>Thanks,</p>
+<p><em>Correction version:</em> "We reviewed the signed LOD. One item needs correcting: [exact item]. Could you send a corrected LOD for signature? [Producer]'s signature stays on hold until it's received."</p>
+<hr />
+<h3>Email 04 — Missing Signature</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Signature Needed</p>
+<p>Hi [Name],</p>
+<p>The agreement for "[Song]" is still missing [whose] signature on [page / exhibit]. Could you let us know when we can expect it?</p>
+<p>Thanks,</p>
+<p><em>(For the other side's signatures only. Never use this to ask our producer to sign before the LOD is in.)</em></p>
+<hr />
+<h3>Email 05 — Release Confirmation</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Release Confirmation</p>
+<p>Hi [Name],</p>
+<p>Can you confirm the release date for "[Song]" and the ISRC, if it's been assigned?</p>
+<p>Thanks,</p>
+<hr />
+<h3>Email 06 — Final Follow-Up</h3>
+<p><strong>Subject:</strong> Follow-Up — [Artist] — [Song]</p>
+<p>Hi [Name],</p>
+<p>Following up again on the note below. We still need:
+- [item]</p>
+<p>Copying [Producer's attorney] for visibility.</p>
+<p>Thanks,</p>
+<hr />
+<h3>Email 07 — Paperwork Request (unpapered placement)</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Paperwork</p>
+<p>Hi [Name],</p>
+<p>Thanks for sending "[Song]." Before anything moves forward on [Producer]'s production, can you tell us: is it being released and through which label; who's handling the producer paperwork; and the proposed terms?</p>
+<p>Thanks,</p>
+<hr />
+<h3>Email 08 — Terms Confirmation</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Please Confirm Terms</p>
+<p>Hi [Name],</p>
+<p>Here are the terms for "[Song]" as we have them from [sender] on [date]. Please confirm each line, or tell us what's different:
+- Advance: [amount] [all-in?], split [split]
+- Points: [total], split [split]
+- Publishing: [share] ([each / total])
+- Credit: "[credit]"</p>
+<p>Also: were any samples or interpolations used, and did anyone else work on the production or writing?</p>
+<p>Thanks,</p>
+<hr />
+<h3>Email 09 — Contracting Info (to the label)</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Producer Contracting Info</p>
+<p>Hi [Name],</p>
+<p>Contracting info for [Producer] on "[Song]":
+- Producer: [legal name] p/k/a [name]
+- Company: [company], [state] — signer: [name, title]
+- Notice: [address / email] — Counsel: [attorney]
+- PRO / IPI: [PRO / IPI] — Publishing designee: [publisher]
+- Advance payee: [company] — SoundExchange LOD payee: [company]</p>
+<p>Please send the artist's SoundExchange LOD along with the draft. [Producer] will sign once the artist-signed LOD and certificate are received. Please also send the vendor forms for [payee company].</p>
+<p>Thanks,</p>
+<hr />
+<h3>Email 10 — Vendor Setup</h3>
+<p><strong>Subject:</strong> [Artist] — [Song] — Vendor Setup for [Payee Company]</p>
+<p>Hi [Name],</p>
+<p>To avoid delays at payment, can you send the current vendor/payee forms you need for [payee company]? We'll get them completed and returned.</p>
+<p>Thanks,</p><p class="sm"><a href="downloads/cards/08-follow-up-templates.pdf">Download card 08 (PDF)</a></p></div></details><details class="card" id="card-09"><summary><span class="n">09</span><span class="t">Common Problems &amp; Escalations</span><span class="x">Open</span></summary><div class="doc"><p>You don't need to know <strong>why</strong> something is wrong. You need to know what to do.</p>
+<blockquote>
+<p>🚨 <strong>STOP → DOCUMENT → ESCALATE</strong>
+Stop: take no outside action on it.
+Document: save the emails/files; write one sentence on what's wrong.
+Escalate: send it to your manager the same day.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Your action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contract says one amount, an email says another</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Two documents or emails conflict on any term</td>
+<td>🚨 <strong>Do not choose.</strong> Escalate</td>
+</tr>
+<tr>
+<td>Publishing says "25%" but not whether it's each or total</td>
+<td>🟡 Ask (Email 08); conflicting answers → 🚨</td>
+</tr>
+<tr>
+<td>A new producer, writer, or collaborator shows up</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>A sample or interpolation is mentioned</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Co-producer's team won't confirm the split</td>
+<td>Follow-up clock → 🚨 after the final follow-up</td>
+</tr>
+<tr>
+<td>Agreement has a blank or "to be provided separately" page</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Name misspelled on any document</td>
+<td>Ask the sender to correct it; affects payment or LOD → 🚨</td>
+</tr>
+<tr>
+<td><strong>Someone asks the producer to sign before the artist's LOD is in</strong></td>
+<td>🚨 Escalate. <strong>Keep the hold.</strong></td>
+</tr>
+<tr>
+<td>LOD requested but missing</td>
+<td>Email 03 → follow-up clock</td>
+</tr>
+<tr>
+<td>Signed LOD but no certificate</td>
+<td>Email 03 (ask for the certificate)</td>
+</tr>
+<tr>
+<td>LOD payee or % doesn't match the agreement</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Producer signed, but label/artist hasn't</td>
+<td>Email 01 / 04 → follow-up clock</td>
+</tr>
+<tr>
+<td>Not sure whether the agreement is final</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Contract version changed</td>
+<td>Save the new version (never overwrite) and recheck card 04 Part A</td>
+</tr>
+<tr>
+<td>Vendor form rejected</td>
+<td>Save the rejection; fix only what they named, on the form they sent</td>
+</tr>
+<tr>
+<td>Payment requested but not confirmed</td>
+<td>Email 02 → follow-up clock</td>
+</tr>
+<tr>
+<td>"OK to pay" / PO issued</td>
+<td>Mark PAYMENT PENDING, not paid</td>
+</tr>
+<tr>
+<td>Amount paid ≠ invoice</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Two payment routes, or a third party asks to be paid</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td><strong>Anyone asks you for bank information</strong></td>
+<td>🚨 Escalate. Never send it</td>
+</tr>
+<tr>
+<td>Label asks you to change or agree to deal terms</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Anyone asks you to sign anything</td>
+<td>🚨 Escalate. You never sign</td>
+</tr>
+<tr>
+<td>Release date unknown</td>
+<td>Research + Email 05; record UNKNOWN until proven</td>
+</tr>
+<tr>
+<td>Release ≤10 business days away with anything open</td>
+<td>🚨 Escalate the same day</td>
+</tr>
+<tr>
+<td>Song came out before paperwork was done</td>
+<td>Mark RELEASED WITH OUTSTANDING ITEMS + 🚨</td>
+</tr>
+<tr>
+<td>No reply after the final follow-up</td>
+<td>🚨 Escalate</td>
+</tr>
+<tr>
+<td>Terms or ownership disputed</td>
+<td>🚨 Escalate. Don't argue</td>
+</tr>
+</tbody>
+</table>
+<h2>Escalation note (copy this)</h2>
+<pre><code>Placement: KM-____ — [Artist] — [Song]
+Problem: (one sentence)
+Evidence: (file names)
+Deadline: (release date / promised date)
+Decision needed by: ____-__-__
+</code></pre>
+<p>No answer in 2 business days → resend, marked "second request."</p><p class="sm"><a href="downloads/cards/09-common-problems-escalations.pdf">Download card 09 (PDF)</a></p></div></details><details class="card" id="card-10"><summary><span class="n">10</span><span class="t">Placement Closeout</span><span class="x">Open</span></summary><div class="doc"><h2>Reconciliation (before closeout)</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Match?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amount received = invoice amount</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Invoice amount = fully executed agreement</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Each producer's share received as the agreement says (if we track co-producers)</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>Legal-fee or other invoices each matched to their own payment</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<p>Anything doesn't match → 🚨 Escalate. Don't close.</p>
+<h2>Closeout checklist</h2>
+<p>☐ Fully executed agreement saved<br />
+☐ Artist-signed LOD + certificate saved (received <strong>before</strong> the producer signed)<br />
+☐ Payment confirmed (remittance or bank proof)<br />
+☐ Payment reconciled (table above)<br />
+☐ LOD submitted <strong>and</strong> confirmed active at SoundExchange<br />
+☐ Publishing registration hand-off sent (splits taken from the executed agreement)<br />
+☐ Release confirmed (date + proof saved)<br />
+☐ Credits confirmed (matches the agreement)<br />
+☐ Outstanding issues resolved (no open escalation)<br />
+☐ Final documentation uploaded (folder test below)<br />
+☐ Placement marked <strong>CLOSED</strong>  </p>
+<h2>The six-month test</h2>
+<p>Someone who has never seen this placement opens the folder. Can they prove:</p>
+<p>☐ what was agreed ☐ who produced ☐ who owns what ☐ what was signed, by whom<br />
+☐ what was paid ☐ what was sent to SoundExchange ☐ who signed the LOD<br />
+☐ that the certificate exists ☐ that nothing is outstanding<br />
+All yes →</p>
+<blockquote>
+<h2>✅ PLACEMENT COMPLETE</h2>
+</blockquote><p class="sm"><a href="downloads/cards/10-placement-closeout.pdf">Download card 10 (PDF)</a></p></div></details><details class="card" id="card-11"><summary><span class="n">11</span><span class="t">Employee Do / Don&#x27;t</span><span class="x">Open</span></summary><div class="doc"><h2>✅ DO</h2>
+<ul>
+<li><strong>Save the proof</strong> before you change any stage</li>
+<li><strong>Copy terms word for word</strong> into the record, with the date and sender</li>
+<li><strong>Write UNKNOWN</strong> when no document says it</li>
+<li><strong>Keep every version.</strong> Make a new file; never overwrite</li>
+<li><strong>Open the attachment.</strong> Take facts from the document, not from the email describing it</li>
+<li><strong>Keep the producer's signature on hold</strong> until the artist's LOD + certificate are in</li>
+<li><strong>Ask every co-producer</strong> to confirm the split in writing</li>
+<li><strong>Start vendor paperwork early</strong>, at TERMS</li>
+<li><strong>Follow the clock:</strong> +3 days → follow-up · +3 → final follow-up · +2 → escalate</li>
+<li><strong>Reply on the same thread</strong> so the history stays together</li>
+<li><strong>Update "Next action" and "Due"</strong> every time you touch a placement</li>
+<li><strong>Review every open placement on Monday</strong></li>
+<li><strong>Escalate the same day</strong> when a card says 🚨</li>
+</ul>
+<h2>❌ DON'T</h2>
+<ul>
+<li><strong>Don't negotiate</strong> or suggest terms, even small ones</li>
+<li><strong>Don't pick</strong> between two conflicting numbers</li>
+<li><strong>Don't sign anything</strong> for anyone</li>
+<li><strong>Don't send or ask for bank details, tax IDs, or ID documents</strong> by email (they go on the label's own forms)</li>
+<li><strong>Don't change a payment route</strong> or accept a new one</li>
+<li><strong>Don't release signature pages</strong> before the LOD gate is cleared</li>
+<li><strong>Don't mark anything done</strong> because someone said so ("sent," "signed," "OK to pay")</li>
+<li><strong>Don't tell a label</strong> whether it can release a song</li>
+<li><strong>Don't give legal, tax, or accounting opinions.</strong> "I'll check with my manager" is always a good answer</li>
+<li><strong>Don't send a third follow-up.</strong> Escalate instead</li>
+<li><strong>Don't share placement records or contacts</strong> outside Vox Nova, the producer, and the producer's attorney</li>
+<li><strong>Don't "fix" a document yourself</strong> (spelling, payee, amounts). Ask the sender to correct it</li>
+</ul>
+<h2>When in doubt</h2>
+<blockquote>
+<p><strong>STOP → DOCUMENT → ESCALATE</strong></p>
+</blockquote><p class="sm"><a href="downloads/cards/11-employee-do-don-t.pdf">Download card 11 (PDF)</a></p></div></details><details class="card" id="card-12"><summary><span class="n">12</span><span class="t">Placement Record Template</span><span class="x">Open</span></summary><div class="doc"><p><strong>Stage:</strong> <strong><em>_</em></strong><strong><em> <strong>Status:</strong> 🔴 needs action / 🟡 waiting / 🟢 moving
+<strong>Next action:</strong> </em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em> <strong>Owner:</strong> </strong><strong><em>_ <strong>Due:</strong> </em></strong>_-<strong>-</strong>
+<strong>Last updated:</strong> <strong><em>_-</em>_-</strong> by ___</p>
+<h2>Placement</h2>
+<table>
+<thead>
+<tr>
+<th>Artist</th>
+<th></th>
+<th>Song</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Project</td>
+<td></td>
+<td>Label</td>
+<td></td>
+</tr>
+<tr>
+<td>Manager</td>
+<td></td>
+<td>A&amp;R</td>
+<td></td>
+</tr>
+<tr>
+<td>Artist attorney</td>
+<td></td>
+<td>Label payments contact</td>
+<td></td>
+</tr>
+<tr>
+<td>Our producer</td>
+<td></td>
+<td>Producer's company</td>
+<td></td>
+</tr>
+<tr>
+<td>Producer's attorney</td>
+<td></td>
+<td>Co-producers</td>
+<td></td>
+</tr>
+<tr>
+<td>Placement date</td>
+<td></td>
+<td>How it started</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Deal snapshot (confirmed TS-__)</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Value</th>
+<th>🟢🟡🔴</th>
+<th>Source (file + date)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advance (all-in?)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Producer split</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Points (+ split)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Publishing (each/total)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Credit</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Master rights</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Exclusivity</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Payment party</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Samples</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Other collaborators</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Progress</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Done</th>
+<th>Date</th>
+<th>Proof file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intake</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Terms confirmed</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Contract checked</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Artist LOD + certificate</strong></td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Producer signed</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fully executed</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Vendor setup approved</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Invoice sent + received</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Payment confirmed</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LOD submitted to SoundExchange</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LOD active at SoundExchange</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Release confirmed</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Reconciled</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Closed</td>
+<td>☐</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Payments</h2>
+<table>
+<thead>
+<tr>
+<th>For</th>
+<th>Amount</th>
+<th>Invoice #</th>
+<th>Sent</th>
+<th>Status</th>
+<th>Paid date</th>
+<th>Proof</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producer advance</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Release</h2>
+<p>Release date: <strong><em>_-</em>_-</strong> ☐ announced ☐ actual · Days away: ___ · Release check: ☐ READY ☐ BLOCKED</p>
+<h2>Follow-ups</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>To</th>
+<th>Asked for</th>
+<th>#1 / Final</th>
+<th>Reply?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Escalations</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Problem</th>
+<th>Decision</th>
+<th>By</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Notes / What should be verified next</h2>
+<p>-</p>
+<hr />
+<p><strong>Folder:</strong> <code>Placements/KM-____-____ — Artist — Song/</code>
+<code>00_Record</code> · <code>01_Deal_Terms</code> · <code>02_Clearance</code> · <code>03_Agreement</code> · <code>04_SoundExchange_LOD</code> · <code>05_Vendor_Setup</code> · <code>06_Payment</code> · <code>07_Release</code> · <code>99_Correspondence</code></p><p class="sm"><a href="downloads/cards/12-placement-record-template.pdf">Download card 12 (PDF)</a></p></div></details><details class="card" id="card-13"><summary><span class="n">13</span><span class="t">Manager / Admin Reference</span><span class="x">Open</span></summary><div class="doc"><p><strong>For managers only.</strong> The employee cards (01–12) are short on purpose. The full rules, evidence standards, and reasoning live in the <strong>master SOP</strong>: <em>Vox Nova Producer Placement Operations SOP v1.0</em> (52 pp). If a card and the SOP ever disagree, the SOP wins. Fix the card.</p>
+<h2>Settings</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Escalation owner</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+</tr>
+<tr>
+<td>Backup</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+</tr>
+<tr>
+<td>Placement folder location</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+</tr>
+<tr>
+<td>Follow-up clock</td>
+<td>+3 BD → #1 · +3 BD → final · +2 BD → escalate</td>
+</tr>
+<tr>
+<td>Release escalation</td>
+<td>≤10 BD with any release-check item open</td>
+</tr>
+<tr>
+<td>Payment check</td>
+<td>10 BD after the invoice is acknowledged, or the promised date</td>
+</tr>
+<tr>
+<td>Fully executed copy check</td>
+<td>10 BD after the producer signs</td>
+</tr>
+<tr>
+<td>SoundExchange active check</td>
+<td>every 10 BD; escalate after 3</td>
+</tr>
+<tr>
+<td>Weekly review</td>
+<td>Monday</td>
+</tr>
+</tbody>
+</table>
+<h2>Employee stages ↔ master SOP statuses</h2>
+<table>
+<thead>
+<tr>
+<th>Card stage</th>
+<th>SOP status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INTAKE / UNPAPERED</td>
+<td>P0 NEW / P0-U UNPAPERED</td>
+</tr>
+<tr>
+<td>TERMS</td>
+<td>P1 TERMS REVIEW → P2 TERMS CONFIRMED</td>
+</tr>
+<tr>
+<td>CONTRACT</td>
+<td>P3 CONTRACTING → P4 EXECUTION VERSION RECEIVED</td>
+</tr>
+<tr>
+<td>ARTIST LOD</td>
+<td>P5 LOD GATE — HOLD → P6 LOD RECEIVED</td>
+</tr>
+<tr>
+<td>SIGNATURE</td>
+<td>P7 PRODUCER SIGNED → P8 FULLY EXECUTED</td>
+</tr>
+<tr>
+<td>VENDOR SETUP / INVOICE / PAYMENT</td>
+<td>Payment Track (vendor → route → invoiced → promised → paid-confirmed)</td>
+</tr>
+<tr>
+<td>SOUNDEXCHANGE</td>
+<td>SX Track (submitted → active-confirmed)</td>
+</tr>
+<tr>
+<td>RELEASE</td>
+<td>P9 RELEASE READY / RELEASED WITH OUTSTANDING ITEMS</td>
+</tr>
+<tr>
+<td>RECONCILIATION + CLOSEOUT</td>
+<td>P10 COMPLETE</td>
+</tr>
+</tbody>
+</table>
+<h2>Decisions only a manager makes</h2>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Where it comes up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept any difference between the agreement and the confirmed terms</td>
+<td>Card 04 Part A</td>
+</tr>
+<tr>
+<td>Set "LOD not required" (with the reason written down)</td>
+<td>Card 06</td>
+</tr>
+<tr>
+<td>Approve invoicing before full execution</td>
+<td>Card 05</td>
+</tr>
+<tr>
+<td>Accept "payment will follow release" for the release check</td>
+<td>Card 07</td>
+</tr>
+<tr>
+<td>Approve an "open items" email to a label before release</td>
+<td>Card 07</td>
+</tr>
+<tr>
+<td>Mark any release-check item N/A</td>
+<td>Card 07</td>
+</tr>
+<tr>
+<td>Close a placement as NOT PLACED</td>
+<td>Card 02</td>
+</tr>
+<tr>
+<td>Every 🚨 on card 09</td>
+<td>Card 09</td>
+</tr>
+</tbody>
+</table>
+<p>Anything that needs a legal, tax, or accounting judgment goes to the producer's attorney or accountant. These cards are operations controls, <strong>not legal advice.</strong></p>
+<h2>Escalation priority</h2>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Situations</th>
+<th>Respond</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Urgent</strong></td>
+<td>Producer asked to sign before LOD · release ≤10 BD with items open · second payment route · anyone asks staff to sign, give bank details, or take funds</td>
+<td>Same business day</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>Term conflicts · new collaborator · sample · agreement ≠ terms · amount mismatch · LOD problems · disputes</td>
+<td>≤2 BD</td>
+</tr>
+<tr>
+<td><strong>Normal</strong></td>
+<td>Identity/entity questions · splits don't add up · no reply after final follow-up · misspellings</td>
+<td>≤2 BD</td>
+</tr>
+</tbody>
+</table>
+<h2>Weekly manager review (Monday)</h2>
+<p>☐ Every open placement has a next action + due date + owner<br />
+☐ No request is past its escalation day without an escalation<br />
+☐ Every release ≤10 BD shows READY or an escalation<br />
+☐ No placement shows "paid" without proof in <code>06_Payment/</code><br />
+☐ No producer signed before the artist's LOD (check dates on the record)<br />
+☐ Spot-check one closed placement with the six-month test (card 10)  </p>
+<h2>Later (not built yet)</h2>
+<p><strong>Placement economics.</strong> Once enough placements are closed with confirmed payments, the payment records can feed a placement P&amp;L (revenue → advance → admin/commission → producer share → expenses → net). Payment tracking comes first. Don't build the P&amp;L before the data exists.</p>
+<p><strong>Keyman app module.</strong> These cards become screens: a home work queue (🔴 needs action / 🟡 waiting / 🟢 moving) and a placement cockpit (stage, next action, deal snapshot, progress, evidence, and actions: Send Follow-Up · Request LOD · Upload Evidence · Add Note · Escalate).</p>
+<hr />
+<p><em>© 2026 Keyman Publishing, LLC · Licensed to Vox Nova, LLC</em></p><p class="sm"><a href="downloads/cards/13-manager-admin-reference.pdf">Download card 13 (PDF)</a></p></div></details>
+</section>
+
+<section class="panel" id="sop">
+ <p class="eyebrow">Master document</p><h2>Standard operating procedure</h2><div class="rule"></div>
+ <p class="sub">The complete rules, status definitions and evidence standards behind the employee cards. <a href="downloads/Keyman_Producer_Placement_SOP_v1.0.pdf">Download the full SOP (PDF)</a></p>
+ <div class="sop"><nav class="toc"><b>Overview</b><a href="#sop-readme">Read me</a><a href="#sop-sop">Standard Operating Procedure</a><a href="#sop-data-status-definitions">Status definitions</a><b>Workflows</b><a href="#sop-workflows-placement-intake">1 · Intake &amp; terms</a><a href="#sop-workflows-contracting">2 · Contracting</a><a href="#sop-workflows-soundexchange-lod">3 · SoundExchange LOD</a><a href="#sop-workflows-payment">4 · Payment</a><a href="#sop-workflows-pre-release-gate">5 · Pre-release gate</a><a href="#sop-workflows-escalation">6 · Escalation</a><b>Intake</b><a href="#sop-intake-required-fields">Required fields</a><a href="#sop-intake-placement-intake-template">Placement record</a><b>Email templates</b><a href="#sop-templates-producer-terms-confirmation">Terms confirmation</a><a href="#sop-templates-contracting-info-request">Contracting info</a><a href="#sop-templates-lod-request">LOD request</a><a href="#sop-templates-payment-request">Payment</a><a href="#sop-templates-missing-information-followup">Follow-ups</a><a href="#sop-templates-pre-release-clearance">Pre-release</a><b>Checklists</b><a href="#sop-checklists-operator-checklist">Operator</a><a href="#sop-checklists-payment-checklist">Payment</a><a href="#sop-checklists-lod-checklist">LOD</a><a href="#sop-checklists-release-readiness-checklist">Release readiness</a><b>Data</b><a href="#sop-data-placement-schema">Record schema</a><a href="#sop-data-historical-basis">Historical basis</a></nav><div><section class="sopsec" id="sop-readme"><p class="src">Overview · README.md</p><div class="doc"><h1>Producer Placement Operations</h1>
+<p><strong>Keyman Publishing, LLC · Licensed to Vox Nova, LLC</strong></p>
+<p>A delegated playbook for taking a producer placement from the first email
+to <strong>contracted, paid, and SoundExchange LOD active</strong>, with proof at
+every step.</p>
+<h2>The one rule that makes it work</h2>
+<blockquote>
+<p><strong>Status moves on evidence, not on emails.</strong>
+LOD sent ≠ LOD signed ≠ certificate verified ≠ active at SoundExchange.
+Contract sent ≠ producer signed ≠ fully executed.
+Invoice sent ≠ "OK to pay" ≠ paid.</p>
+</blockquote>
+<h2>The Vox Nova sequencing rule</h2>
+<blockquote>
+<p><strong>The artist's signed SoundExchange LOD, with its certificate of
+completion, must be received before the producer signs the producer
+agreement.</strong> (Status P5 LOD GATE — HOLD.)</p>
+</blockquote>
+<h2>Start here</h2>
+<ol>
+<li>New email or file about a placement → <code>workflows/placement-intake.md</code></li>
+<li>Work the placement with → <code>checklists/operator-checklist.md</code></li>
+<li>Words for every email → <code>templates/</code></li>
+<li>Stuck, a conflict, or a deadline → <code>workflows/escalation.md</code></li>
+</ol>
+<h2>Settings (filled in by Vox Nova management)</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Escalation Owner (name, email)</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+</tr>
+<tr>
+<td>Backup Escalation Owner</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+</tr>
+<tr>
+<td>Placements folder location</td>
+<td><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</td>
+</tr>
+<tr>
+<td>Standard follow-up clock</td>
+<td>FU1 3 BD → FU2 +3 BD → escalate +2 BD</td>
+</tr>
+<tr>
+<td>Release countdown escalation</td>
+<td>≤10 BD with any gate item open</td>
+</tr>
+<tr>
+<td>Payment check after invoice acknowledged</td>
+<td>10 BD (or the promised date, if sooner)</td>
+</tr>
+<tr>
+<td>SoundExchange active re-check</td>
+<td>every 10 BD, escalate after 3</td>
+</tr>
+<tr>
+<td>Weekly review day</td>
+<td>Monday</td>
+</tr>
+</tbody>
+</table>
+<h2>Contents</h2>
+<pre><code>producer-placement-ops/
+  README.md                         ← you are here
+  SOP.md                            roles, flow, timers, document control, legal boundary
+  intake/
+    placement-intake-template.md    the master placement record (copy per song)
+    required-fields.md              minimum data by stage
+  workflows/
+    placement-intake.md             P0 → P2  intake, term snapshots, confirmations
+    contracting.md                  P2 → P8  contracting info, reconciliation, LOD gate, execution
+    soundexchange-lod.md            LOD request → certificate verification → active
+    payment.md                      vendor setup → route → invoice → paid-confirmed
+    pre-release-gate.md             RELEASE READY vs BLOCKED
+    escalation.md                   16 triggers (E-01 … E-16) + how to escalate
+  templates/                        email wording + send / reply / no-reply rules
+  checklists/                       operator, payment, LOD, release-readiness
+  data/
+    status-definitions.md           every status + the evidence needed to enter it
+    placement-schema.md             field definitions
+    placement-tracker.csv           one row per placement (header only)
+    historical-basis.md             the 4 audited placements behind each rule
+</code></pre>
+<h2>Boundaries</h2>
+<ul>
+<li>Operations controls only. <strong>Not legal, tax or accounting advice.</strong>
+  Terms, clearance judgments and disputes go to the producer's attorney
+  through the Escalation Owner.</li>
+<li>The operator never signs, agrees to terms, releases signature pages,
+  handles bank details, receives funds, or tells a label whether it can
+  release.</li>
+<li>Placement records, contacts and the tracker are internal and are never
+  published.</li>
+</ul>
+<h2>Source</h2>
+<p>Built 2026-09-30 from four producer placement email audits (Cases 1–4).
+See <code>data/historical-basis.md</code>. Follow-up timers are Vox Nova policy; the
+historical record showed silences, not a working cadence.</p></div></section><section class="sopsec" id="sop-sop"><p class="src">Overview · SOP.md</p><div class="doc"><h1>SOP — Producer Placement → LOD → Contract → Payment → Release</h1>
+<p><strong>Licensor:</strong> Keyman Publishing, LLC · <strong>Licensee:</strong> Vox Nova, LLC
+<strong>Applies to:</strong> every song where a Vox Nova producer client is credited as a producer
+<strong>Version:</strong> 1.0 — 2026-09-30</p>
+<hr />
+<h2>1. Purpose</h2>
+<p>Take a placement from the first email to a closed file, and be able to
+prove every step with a document. The operator's job is not to believe
+that something happened. It is to <strong>collect the proof that moves the
+placement to its next status.</strong></p>
+<h2>2. Operational controls, not legal advice</h2>
+<p>This SOP is an operations checklist. It does not interpret contracts,
+decide what terms are fair, or give legal, tax or accounting advice.
+Whenever this SOP says "compare" or "reconcile," the operator checks that
+the words and numbers are the <strong>same</strong>. Deciding whether a difference is
+acceptable belongs to the producer and their attorney, through the
+Escalation Owner.</p>
+<p>The operator <strong>never</strong>:
+- signs anything, for anyone
+- agrees to, proposes or changes any deal term
+- releases a producer's signature pages
+- gives payment or bank details, or changes a payment route
+- tells a label the song can or can't be released
+- receives or forwards producer advances</p>
+<h2>3. Roles</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Who (typically)</th>
+<th>What they do in this flow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Operator</strong></td>
+<td>Vox Nova staff</td>
+<td>Runs this SOP: records, requests, follow-ups, evidence, status.</td>
+</tr>
+<tr>
+<td><strong>Escalation Owner</strong></td>
+<td>Named in <code>README.md</code> → Settings</td>
+<td>Decides everything in <code>workflows/escalation.md</code>.</td>
+</tr>
+<tr>
+<td><strong>Producer client</strong></td>
+<td>Vox Nova's producer</td>
+<td>Confirms terms, answers sample questions, signs through their attorney.</td>
+</tr>
+<tr>
+<td><strong>Producer attorney</strong></td>
+<td>Producer's counsel</td>
+<td>Negotiates, handles signature pages, often sends invoices.</td>
+</tr>
+<tr>
+<td><strong>Label business affairs</strong></td>
+<td>Label legal/business affairs</td>
+<td>Sends terms and drafts, collects contracting info, circulates execution copies.</td>
+</tr>
+<tr>
+<td><strong>Artist attorney</strong></td>
+<td>Artist's counsel</td>
+<td>Often drafts the producer agreement; gets the artist to sign the LOD.</td>
+</tr>
+<tr>
+<td><strong>Label A&amp;R admin / payments</strong></td>
+<td>Label A&amp;R administration / accounts payable</td>
+<td>Vendor forms, PO, payment release, remittance.</td>
+</tr>
+<tr>
+<td><strong>Co-producers' teams</strong></td>
+<td>Other producers' reps</td>
+<td>Must confirm splits; sign their own agreements.</td>
+</tr>
+</tbody>
+</table>
+<h2>4. The flow at a glance</h2>
+<pre><code>WHAT CAME IN? ───────────── P0 NEW  (audio only / no terms → P0-U UNPAPERED)
+     │  workflows/placement-intake.md
+WHAT DATA DO I EXTRACT? ─── P1 TERMS REVIEW   (Term Snapshot, quotes, UNKNOWNs)
+     │
+WHAT IS MISSING? ────────── P2 TERMS CONFIRMED (every producer confirms + samples + collaborators)
+     │                         └─ Payment Track: start vendor setup now
+     │  workflows/contracting.md
+WHO DO I CONTACT? ───────── P3 CONTRACTING     (contracting info out; LOD requested NOW)
+     │
+WHAT DOCUMENT DO I NEED? ── P4 EXECUTION VERSION RECEIVED (reconcile to confirmed terms)
+     │  workflows/soundexchange-lod.md
+     ├──────────────────── P5 LOD GATE — HOLD  (producer does NOT sign)
+     │
+WHAT PROVES COMPLETION? ─── P6 LOD RECEIVED    (artist-signed LOD + certificate verified)
+     │
+                            P7 PRODUCER SIGNED
+                            P8 FULLY EXECUTED  (every signature line)
+     │  workflows/payment.md              workflows/soundexchange-lod.md §6
+HAS THE PRODUCER BEEN PAID? → Payment Track → PAID-CONFIRMED
+HAS THE LOD BEEN EXECUTED?  → SX Track → SUBMITTED → ACTIVE-CONFIRMED
+     │  workflows/pre-release-gate.md
+IS THE SONG RELEASE-READY? ─ P9 RELEASE READY  (or BLOCKED — DO NOT MARK RELEASE READY)
+     │
+                            P10 COMPLETE       (paid + SX active + evidence audit + registration hand-off)
+
+IF NOT, WHO DO I ESCALATE TO? → workflows/escalation.md
+</code></pre>
+<p><strong>The LOD rule:</strong> the artist's signature on the SoundExchange Letter of
+Direction, with its certificate of completion, must be <strong>in Vox Nova's
+hands before the producer signs the producer agreement.</strong> This is the
+producer's only leverage to get the LOD. After the producer signs, the
+artist side has no reason to hurry (historical case C3: three requests,
+no certificate).</p>
+<h2>5. Timers (business days = BD)</h2>
+<table>
+<thead>
+<tr>
+<th>Clock</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Standard request</td>
+<td>No reply in <strong>3 BD</strong> → Follow-Up #1. No reply <strong>3 BD</strong> after FU1 → Follow-Up #2. No reply <strong>2 BD</strong> after FU2 → escalate (E-13).</td>
+</tr>
+<tr>
+<td>New inbound placement email</td>
+<td>Record created <strong>same BD</strong>; Term Snapshot within <strong>1 BD</strong>.</td>
+</tr>
+<tr>
+<td>Producer signature pages released</td>
+<td>Receipt confirmed by the other side within <strong>2 BD</strong>, or FU1.</td>
+</tr>
+<tr>
+<td>Fully executed copy</td>
+<td>Not received <strong>10 BD</strong> after the producer signed → FU1 to the label, then the standard clock.</td>
+</tr>
+<tr>
+<td>LOD signed after the certificate is verified</td>
+<td>SoundExchange submission proof within <strong>10 BD</strong>; active confirmation checked every <strong>10 BD</strong> until confirmed.</td>
+</tr>
+<tr>
+<td>Invoice → payment</td>
+<td>Check at <strong>10 BD</strong> after the invoice is acknowledged (or on the label's promised date, if sooner). Then the standard clock.</td>
+</tr>
+<tr>
+<td>Release countdown</td>
+<td>Any gate item open at <strong>≤10 BD</strong> to release → escalate (E-12) the same day.</td>
+</tr>
+<tr>
+<td>Record review</td>
+<td>Every open record reviewed <strong>weekly</strong> (Monday). Update "Next action" and "Last updated."</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Document control</h2>
+<h3>6.1 Folder per placement</h3>
+<pre><code>Placements/
+  KM-2026-0001 — &lt;Artist&gt; — &lt;Song&gt;/
+    00_Record/                 placement-record.md, comms-log.md, escalations.md
+    01_Deal_Terms/             TS-1_..., TS-2_..., producer confirmations
+    02_Clearance/              sample answers/forms, collaborator confirmations, session/legal-info forms, stems delivery proof
+    03_Agreement/
+        drafts/                every draft/redline, dated
+        execution-version/     the reconciled execution PDF + reconciliation sheet
+        producer-signed/       producer-signed PDF + e-sign certificate
+        fully-executed/        final PDF, all signatures
+    04_SoundExchange_LOD/      LOD request, artist-signed LOD, Certificate of Completion, verification sheet, SX submission, SX active proof
+    05_Vendor_Setup/           W-9, label vendor/registration forms, rejections, approval
+    06_Payment/                invoice(s), PO, promised-date emails, remittance/bank proof — one sub-folder per obligation
+    07_Release/                release-date proof, pre-release gate sheet
+    99_Correspondence/         saved emails (PDF), named by date + subject
+</code></pre>
+<h3>6.2 File naming</h3>
+<p><code>YYYY-MM-DD_&lt;doc-type&gt;_&lt;party&gt;_&lt;status&gt;.pdf</code>
+e.g. <code>2026-10-14_LOD_ArtistName_SIGNED.pdf</code>,
+<code>2026-10-14_LOD-Certificate_ArtistName.pdf</code>,
+<code>2026-10-20_Agreement_FULLY-EXECUTED.pdf</code>.</p>
+<h3>6.3 Handling rules</h3>
+<ul>
+<li>Save every email that changes status as a PDF in <code>99_Correspondence/</code>.</li>
+<li>Open every attachment that the record depends on. Take facts from the
+  document, not from the email describing it.</li>
+<li>Never overwrite: new versions get a new date prefix.</li>
+<li>Bank account numbers, IDs and tax IDs are <strong>never</strong> typed into the
+  record or tracker. Store only the file the label received, in
+  <code>05_Vendor_Setup/</code>.</li>
+<li>Contact lists, placement records and the tracker are internal. They are
+  never posted, published or shared outside Vox Nova, the producer, and
+  the producer's attorney.</li>
+</ul>
+<h3>6.4 Six-month test (done at P10)</h3>
+<p>Another operator, opening only the folder, can prove:</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Where the proof is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What was agreed?</td>
+<td><code>03_Agreement/fully-executed/</code> (+ Term Snapshots for history)</td>
+</tr>
+<tr>
+<td>Who produced?</td>
+<td>Credit line + co-producer confirmations in <code>01_Deal_Terms/</code></td>
+</tr>
+<tr>
+<td>Who owns what?</td>
+<td>Executed agreement splits + <code>02_Clearance/</code></td>
+</tr>
+<tr>
+<td>What was signed, by whom, when?</td>
+<td>Signed PDFs + e-sign certificates</td>
+</tr>
+<tr>
+<td>What was paid?</td>
+<td><code>06_Payment/</code> remittance matched to invoice</td>
+</tr>
+<tr>
+<td>What went to SoundExchange, and is it active?</td>
+<td><code>04_SoundExchange_LOD/</code> submission + active proof</td>
+</tr>
+<tr>
+<td>Who signed the LOD? Does the certificate exist?</td>
+<td>Artist-signed LOD + verified certificate</td>
+</tr>
+<tr>
+<td>Is anything outstanding?</td>
+<td><code>00_Record/placement-record.md</code> → Outstanding items (empty)</td>
+</tr>
+</tbody>
+</table>
+<h2>7. After COMPLETE — publishing hand-off</h2>
+<p>At P10, send the internal registration hand-off (song, all writers and
+producers, confirmed publishing shares from the executed agreement, ISRC
+if known, release date) to Vox Nova's registration workflow. Registration
+is a separate process. This SOP only guarantees that the split data sent
+comes from the executed agreement.</p>
+<h2>8. Where everything lives</h2>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start a new placement</td>
+<td><code>intake/placement-intake-template.md</code>, <code>intake/required-fields.md</code></td>
+</tr>
+<tr>
+<td>Step-by-step per stage</td>
+<td><code>workflows/*.md</code></td>
+</tr>
+<tr>
+<td>Email wording</td>
+<td><code>templates/*.md</code></td>
+</tr>
+<tr>
+<td>Daily checkbox list</td>
+<td><code>checklists/operator-checklist.md</code></td>
+</tr>
+<tr>
+<td>Status meanings</td>
+<td><code>data/status-definitions.md</code></td>
+</tr>
+<tr>
+<td>Field definitions</td>
+<td><code>data/placement-schema.md</code>, <code>data/placement-tracker.csv</code></td>
+</tr>
+<tr>
+<td>Why the rules exist</td>
+<td><code>data/historical-basis.md</code></td>
+</tr>
+</tbody>
+</table></div></section><section class="sopsec" id="sop-data-status-definitions"><p class="src">Overview · data/status-definitions.md</p><div class="doc"><h1>Status Definitions &amp; Transition Rules</h1>
+<p>Every placement has exactly <strong>one Placement Status</strong> at a time, plus two
+parallel <strong>Track Statuses</strong> (Payment, SoundExchange) that open after the
+agreement is fully executed.</p>
+<p>A status moves forward <strong>only when the evidence in the "Required to enter"
+column is saved in the placement folder</strong> (see <code>../SOP.md</code> §6 Document
+Control). An email that <em>describes</em> an event is not evidence of the event.</p>
+<hr />
+<h2>1. Placement Status (main line)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Status</th>
+<th>Meaning</th>
+<th>Required to ENTER this status (evidence)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0</td>
+<td><strong>NEW</strong></td>
+<td>Something about a possible placement came in.</td>
+<td>Placement record created with source email/file saved to <code>99_Correspondence/</code>.</td>
+</tr>
+<tr>
+<td>P0-U</td>
+<td><strong>UNPAPERED</strong></td>
+<td>Only an audio file, title match, or verbal mention exists — no commercial terms in writing.</td>
+<td>Record created; "What should be verified next" filled in. Stays here until written terms arrive.</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><strong>TERMS REVIEW</strong></td>
+<td>Written deal terms received; being extracted and checked.</td>
+<td>Term Snapshot #1 saved (<code>01_Deal_Terms/</code>) with the exact quoted sentence for each term.</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><strong>TERMS CONFIRMED</strong></td>
+<td>Every producer on the song has confirmed the same terms in writing, and samples/collaborators are answered.</td>
+<td>(a) Written "confirmed" reply from each producer or their rep, referencing the snapshot version; (b) written sample answer from the producer side (none / list); (c) written collaborator answer; (d) no open Contradiction Flag.</td>
+</tr>
+<tr>
+<td>P3</td>
+<td><strong>CONTRACTING</strong></td>
+<td>Contracting info delivered; agreement being drafted / negotiated.</td>
+<td>Contracting-info email sent (saved) <strong>and</strong> acknowledged, or first draft agreement received.</td>
+</tr>
+<tr>
+<td>P4</td>
+<td><strong>EXECUTION VERSION RECEIVED</strong></td>
+<td>The final, clean agreement for signature is in hand and reconciled to confirmed terms.</td>
+<td>Execution-version PDF saved in <code>03_Agreement/</code> + Terms Reconciliation completed with every field = MATCH (or each difference approved in writing by the Escalation Owner).</td>
+</tr>
+<tr>
+<td>P5</td>
+<td><strong>LOD GATE — HOLD</strong></td>
+<td>Waiting for the <strong>artist-signed SoundExchange LOD</strong> before the producer signs. Producer must NOT sign in this status.</td>
+<td>Execution version reconciled (P4). Applies whenever LOD Required = YES.</td>
+</tr>
+<tr>
+<td>P6</td>
+<td><strong>LOD RECEIVED</strong></td>
+<td>Artist-signed LOD and its certificate of completion are in hand and verified.</td>
+<td>(a) LOD PDF with artist signature; (b) e-signature <strong>Certificate of Completion</strong> for that envelope; (c) LOD Verification (workflow <code>soundexchange-lod.md</code> §4) all PASS.</td>
+</tr>
+<tr>
+<td>P7</td>
+<td><strong>PRODUCER SIGNED</strong></td>
+<td>Producer has signed the agreement.</td>
+<td>Producer-signed PDF <strong>and</strong> the e-signature certificate (or scanned wet-ink pages). A drawn/pasted image signature does not count.</td>
+</tr>
+<tr>
+<td>P8</td>
+<td><strong>FULLY EXECUTED</strong></td>
+<td>All parties have signed.</td>
+<td>Fully executed PDF showing <strong>every</strong> signature line signed (including inducement letters and exhibits that require signatures). "OK to pay", "we'll circle back with the executed copy", or a partially executed copy do <strong>not</strong> count.</td>
+</tr>
+<tr>
+<td>P9</td>
+<td><strong>RELEASE READY</strong></td>
+<td>Everything required before release is done.</td>
+<td>Pre-release gate (<code>../checklists/release-readiness-checklist.md</code>) = all required items PASS.</td>
+</tr>
+<tr>
+<td>P10</td>
+<td><strong>COMPLETE</strong></td>
+<td>Placement fully closed.</td>
+<td>Payment Track = PAID-CONFIRMED <strong>and</strong> SoundExchange Track = ACTIVE-CONFIRMED (or N/A with reason) <strong>and</strong> evidence package audit passed <strong>and</strong> registration hand-off sent.</td>
+</tr>
+</tbody>
+</table>
+<h3>Side statuses (can be set from any P-status)</h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>When to set</th>
+<th>How to leave it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BLOCKED</strong></td>
+<td>Any required item can't move without someone else acting and a follow-up rule has run out, or an escalation trigger fires. Record the blocker in one sentence.</td>
+<td>Blocker resolved <strong>with evidence</strong> → return to the prior P-status.</td>
+</tr>
+<tr>
+<td><strong>ESCALATED</strong></td>
+<td>An escalation trigger in <code>../workflows/escalation.md</code> fires.</td>
+<td>Escalation Owner writes a decision in the record → return to the prior P-status or move to CLOSED.</td>
+</tr>
+<tr>
+<td><strong>RELEASED WITH OUTSTANDING ITEMS</strong></td>
+<td>The song came out before P9. (This happened in all 3 of the papered historical cases.) Keep the P-status too, e.g. <code>P7 / RELEASED WITH OUTSTANDING ITEMS</code>.</td>
+<td>Reach P10.</td>
+</tr>
+<tr>
+<td><strong>CLOSED — NOT PLACED</strong></td>
+<td>Written confirmation that the song won't use the producer's work, or the Escalation Owner closes it.</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3>Rules that never bend</h3>
+<ol>
+<li><strong>No producer signature before P6</strong> when LOD Required = YES. If anyone
+   asks the producer to sign first, escalate (trigger E-10).</li>
+<li><strong>No skipping.</strong> P5 → P7 is not allowed. P3 → P7 is not allowed.</li>
+<li><strong>Terms change = back to P1.</strong> If any term changes after P2, create a
+   new Term Snapshot, set a Contradiction Flag, and go back to TERMS REVIEW.</li>
+<li><strong>Status only moves on evidence.</strong> If the evidence isn't in the folder,
+   the status doesn't move, whatever the email says.</li>
+</ol>
+<hr />
+<h2>2. Payment Track (opens at P2, completes after P8)</h2>
+<p>Vendor setup can start as soon as terms are confirmed, so paperwork isn't
+what holds up payment later.</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Required to enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PAY-NOT STARTED</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>VENDOR SETUP IN PROGRESS</strong></td>
+<td>Vendor/payee forms requested by the label (e.g. W-9, label vendor or registration form, tax portal) saved to <code>05_Vendor_Setup/</code>.</td>
+</tr>
+<tr>
+<td><strong>VENDOR SETUP CONFIRMED</strong></td>
+<td>Written confirmation from the label's admin that the vendor/payee record is created or approved. "Looks good to submit" = still IN PROGRESS.</td>
+</tr>
+<tr>
+<td><strong>ROUTE CONFIRMED</strong></td>
+<td>One payee entity + one bank route for each obligation, confirmed in writing by the label, matching the agreement's payment-direction letter (if any).</td>
+</tr>
+<tr>
+<td><strong>INVOICED</strong></td>
+<td>Invoice PDF saved, with invoice #, amount, payee entity, PO # (if the label uses POs), and the send email saved. Only allowed at or after P8, unless the Escalation Owner approves in writing.</td>
+</tr>
+<tr>
+<td><strong>PAYMENT PROMISED</strong></td>
+<td>Label states a payment date / "OK to pay" / PO issued. <strong>Not payment.</strong></td>
+</tr>
+<tr>
+<td><strong>PAID-CONFIRMED</strong></td>
+<td>Bank deposit record or remittance advice showing <strong>amount, payer, and date</strong>, matched to the invoice #. An ACH notice with no amount or payer does not count.</td>
+</tr>
+<tr>
+<td><strong>PAY-DISPUTED</strong></td>
+<td>Amount received ≠ invoice amount, or a duplicate/conflicting payment route exists → escalate (E-08 / E-09).</td>
+</tr>
+</tbody>
+</table>
+<p>Each obligation gets its own row: producer advance, legal fee invoice, any
+other invoice. Never merge them.</p>
+<hr />
+<h2>3. SoundExchange Track</h2>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Required to enter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SX-N/A</strong></td>
+<td>Written reason saved (e.g. agreement has no SoundExchange LOD and the producer's attorney confirms none is due). Only the Escalation Owner can set this.</td>
+</tr>
+<tr>
+<td><strong>LOD REQUESTED</strong></td>
+<td>Request email saved (template <code>lod-request.md</code>).</td>
+</tr>
+<tr>
+<td><strong>LOD SENT FOR SIGNATURE</strong></td>
+<td>E-sign envelope notice or the other side's email saying it was sent, saved.</td>
+</tr>
+<tr>
+<td><strong>LOD SIGNED BY ARTIST</strong></td>
+<td>Artist-signed LOD PDF saved.</td>
+</tr>
+<tr>
+<td><strong>CERTIFICATE VERIFIED</strong></td>
+<td>Certificate of Completion saved and all verification checks PASS. = Placement P6.</td>
+</tr>
+<tr>
+<td><strong>SUBMITTED TO SOUNDEXCHANGE</strong></td>
+<td>Proof of who submitted the LOD to SoundExchange and when (submission email, portal screenshot, or SoundExchange case/ticket email).</td>
+</tr>
+<tr>
+<td><strong>ACTIVE-CONFIRMED</strong></td>
+<td>SoundExchange email or a dated portal screenshot showing the LOD active for the named payee. A signed LOD + certificate alone are <strong>not</strong> proof that SoundExchange has it on file.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>4. Evidence ≠ Claims — quick reference</h2>
+<table>
+<thead>
+<tr>
+<th>What someone says</th>
+<th>What status it proves</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"I sent the LOD"</td>
+<td>LOD SENT FOR SIGNATURE at most</td>
+</tr>
+<tr>
+<td>"He signed it"</td>
+<td>Nothing until the signed PDF is saved</td>
+</tr>
+<tr>
+<td>Signed LOD PDF</td>
+<td>LOD SIGNED BY ARTIST — not CERTIFICATE VERIFIED</td>
+</tr>
+<tr>
+<td>Certificate of Completion</td>
+<td>CERTIFICATE VERIFIED — not ACTIVE at SoundExchange</td>
+</tr>
+<tr>
+<td>"Contract sent"</td>
+<td>Nothing for execution</td>
+</tr>
+<tr>
+<td>Partially executed copy</td>
+<td>Not FULLY EXECUTED</td>
+</tr>
+<tr>
+<td>"OK to pay" / PO issued / "should land Wednesday"</td>
+<td>PAYMENT PROMISED</td>
+</tr>
+<tr>
+<td>Invoice sent</td>
+<td>INVOICED</td>
+</tr>
+<tr>
+<td>Remittance advice or bank deposit matching the invoice</td>
+<td>PAID-CONFIRMED</td>
+</tr>
+</tbody>
+</table></div></section><section class="sopsec" id="sop-workflows-placement-intake"><p class="src">Workflows · workflows/placement-intake.md</p><div class="doc"><h1>Workflow 1 — Placement Intake &amp; Terms (P0 → P2)</h1>
+<h2>Trigger</h2>
+<p>Any of these arrives for a Vox Nova producer client:
+- a label/business-affairs email with a song title + terms, or a request for producer details
+- an attorney email about a producer agreement
+- a "which producers / any samples / contracting info" email
+- an audio file, stems request or title mention with <strong>no</strong> terms</p>
+<h2>Step 1 — Create the record (same business day) → P0 NEW</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Search the tracker for the artist + song (and alternate titles). If a record exists, add the thread to it. Don't create a duplicate.</td>
+<td>Tracker search done</td>
+<td>—</td>
+<td>If none exists, create one</td>
+</tr>
+<tr>
+<td>Create the folder <code>Placements/KM-YYYY-NNNN — Artist — Song/</code> from §6.1 of the SOP</td>
+<td>Folder exists</td>
+<td>P0</td>
+<td>Save the source email</td>
+</tr>
+<tr>
+<td>Save the source email as PDF in <code>99_Correspondence/</code></td>
+<td>PDF saved</td>
+<td>P0</td>
+<td>Fill out the intake template</td>
+</tr>
+<tr>
+<td>Fill in <code>intake/placement-intake-template.md</code>: every field known, <code>UNKNOWN</code> for everything else</td>
+<td>Record saved</td>
+<td>P0</td>
+<td>Step 2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>If there are no commercial terms in writing</strong> (audio only, title match,
+"we're using the beat"): set <strong>P0-U UNPAPERED</strong>, fill in "What should be
+verified next," and send <code>templates/missing-information-followup.md</code>
+Version A to the person who sent the file or their label contact. Check
+that the song isn't a different song with the same title (historical case
+C4). Leave the record at P0-U until written terms arrive.</p>
+<h2>Step 2 — Extract terms → P1 TERMS REVIEW (within 1 BD)</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create Term Snapshot <strong>TS-1</strong> in <code>01_Deal_Terms/</code>: for each term, copy the <strong>exact sentence</strong> and note the email date + sender</td>
+<td>TS-1 file saved</td>
+<td>P1</td>
+<td>Check for gaps</td>
+</tr>
+<tr>
+<td>For each term, mark it STATED, UNKNOWN or UNCLEAR. Publishing must say whether the % is <strong>each</strong> producer or <strong>total</strong>. If the wording doesn't say, mark UNCLEAR.</td>
+<td>TS-1 complete</td>
+<td>P1</td>
+<td>Check for contradictions</td>
+</tr>
+<tr>
+<td>Compare against earlier emails in the thread and any other thread for the same song. Any difference → Contradiction Flag OPEN + new snapshot TS-2</td>
+<td>Flag recorded</td>
+<td>P1</td>
+<td>If OPEN → escalate (E-01)</td>
+</tr>
+<tr>
+<td>List every producer credited or mentioned. Anyone not already known → trigger E-05</td>
+<td>Producer list saved</td>
+<td>P1</td>
+<td>Step 3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Minimum terms to get to P2</strong> (all STATED, none UNCLEAR): advance total,
+all-in yes/no, advance allocation, master points/royalty + allocation,
+producer client's publishing share (each vs total), credit line, all
+producers named.</p>
+<h2>Step 3 — Confirm terms, samples and collaborators → P2 TERMS CONFIRMED</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Send <code>templates/producer-terms-confirmation.md</code> to the producer client (cc producer attorney), quoting the snapshot</td>
+<td>Sent email saved</td>
+<td>P1</td>
+<td>Start the 3-BD clock</td>
+</tr>
+<tr>
+<td>Send the same snapshot to <strong>each co-producer's rep</strong> and ask them to confirm the split</td>
+<td>Sent emails saved</td>
+<td>P1</td>
+<td>Clock</td>
+</tr>
+<tr>
+<td>Get the producer's own written answer: samples (none / list) and other collaborators (none / list)</td>
+<td>Reply saved in <code>02_Clearance/</code></td>
+<td>P1</td>
+<td>If a sample or interpolation → E-06</td>
+</tr>
+<tr>
+<td>If the label sent a sample-clearance sheet or session/legal-info form, get it filled in and returned</td>
+<td>Returned form saved</td>
+<td>P1</td>
+<td>—</td>
+</tr>
+<tr>
+<td>All confirmations received, flag CLEARED</td>
+<td>Confirmation files listed in the record</td>
+<td><strong>P2</strong></td>
+<td>Open the Payment Track (payment.md Step 1); go to contracting.md</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What counts as a confirmation:</strong> an email reply that says "confirmed"
+(or equivalent) and refers to the snapshot sent. A thumbs-up emoji, a
+phone call, or "looks good" on a different email does not count. Ask
+again, quoting the snapshot.</p>
+<p><strong>No reply:</strong> follow SOP §5. At escalation, set BLOCKED ("co-producer split
+unconfirmed"). Historical case C3 lost 63 days here.</p>
+<h2>Exit</h2>
+<p>P2 reached → <code>workflows/contracting.md</code>.</p></div></section><section class="sopsec" id="sop-workflows-contracting"><p class="src">Workflows · workflows/contracting.md</p><div class="doc"><h1>Workflow 2 — Contracting (P2 → P8)</h1>
+<p>The producer's LOD gate sits inside this workflow (P5 → P6). Details of
+the LOD itself: <code>soundexchange-lod.md</code>.</p>
+<h2>Step 1 — Contracting information → P3 CONTRACTING</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Collect from the producer/attorney: contracting entity legal name, signer, entity address, producer legal name + p/k/a, PRO + IPI, publishing designee, SoundExchange payee entity, attorney contact, notice address</td>
+<td><code>intake/required-fields.md</code> §C complete</td>
+<td>P2</td>
+<td>Send to the label</td>
+</tr>
+<tr>
+<td>Send <code>templates/contracting-info-request.md</code> <strong>Version B</strong> (the info package) to label business affairs, cc producer attorney. <strong>In the same email, request the SoundExchange LOD</strong> (see soundexchange-lod.md Step 1).</td>
+<td>Sent email saved</td>
+<td><strong>P3</strong></td>
+<td>3-BD clock for acknowledgment</td>
+</tr>
+<tr>
+<td>Log every draft or redline that arrives in <code>03_Agreement/drafts/</code> with date + sender</td>
+<td>Drafts saved</td>
+<td>P3</td>
+<td>Forward to the producer attorney if they weren't copied</td>
+</tr>
+</tbody>
+</table>
+<p>The operator doesn't negotiate. Redlines go between the attorneys. The
+operator tracks who holds the draft ("ball in court") and runs the clock
+on that person.</p>
+<h2>Step 2 — Execution version → P4 EXECUTION VERSION RECEIVED</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Save the clean execution PDF in <code>03_Agreement/execution-version/</code></td>
+<td>PDF saved</td>
+<td>P3</td>
+<td>Reconcile</td>
+</tr>
+<tr>
+<td>Fill in the <strong>Terms Reconciliation</strong> (below): confirmed snapshot vs execution PDF, field by field</td>
+<td>Reconciliation sheet saved</td>
+<td>P3</td>
+<td>All MATCH → P4. Any DIFFERENT → E-07</td>
+</tr>
+<tr>
+<td>List every exhibit/schedule. Any marked "to be provided separately" or blank → record as outstanding</td>
+<td>Exhibit list in the record</td>
+<td>P3</td>
+<td>Missing exhibit → E-07</td>
+</tr>
+<tr>
+<td>Check every name and entity is spelled the same as the contracting info sent</td>
+<td>Name check PASS</td>
+<td>P3</td>
+<td>Misspelling → ask business affairs to correct before signing</td>
+</tr>
+<tr>
+<td>Everything PASS</td>
+<td>—</td>
+<td><strong>P4</strong></td>
+<td>→ P5</td>
+</tr>
+</tbody>
+</table>
+<h3>Terms Reconciliation sheet</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Confirmed snapshot (TS-n)</th>
+<th>Execution PDF (page/§)</th>
+<th>MATCH / DIFFERENT / MISSING</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advance total</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>All-in</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Producer client's advance share</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Points / royalty total</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Producer client's points share</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Publishing share (each/total)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Credit line</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Co-producers named</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Contracting entity</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Payee entity / payment-direction letter</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SoundExchange LOD included? payee + %</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Exhibits complete?</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Only the Escalation Owner can accept a DIFFERENT line, in writing.</p>
+<h2>Step 3 — LOD GATE → P5 HOLD → P6 LOD RECEIVED</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Set <strong>P5 LOD GATE — HOLD</strong>. Tell the producer and their attorney in writing: "Please hold signature until the artist-signed LOD and certificate are received."</td>
+<td>Hold email saved</td>
+<td><strong>P5</strong></td>
+<td>Chase the LOD</td>
+</tr>
+<tr>
+<td>Run <code>soundexchange-lod.md</code> Steps 2–4 until the artist-signed LOD + certificate are verified</td>
+<td>Verification sheet all PASS</td>
+<td>P5</td>
+<td>→ P6</td>
+</tr>
+<tr>
+<td>If anyone asks the producer to sign first, or says the LOD will come "after," don't agree. Escalate.</td>
+<td>Email saved</td>
+<td>P5 + ESCALATED</td>
+<td>E-10</td>
+</tr>
+<tr>
+<td>LOD verified</td>
+<td>—</td>
+<td><strong>P6</strong></td>
+<td>Tell the producer's attorney the gate is cleared</td>
+</tr>
+</tbody>
+</table>
+<p>If LOD Required = NO (set by the Escalation Owner only, with a reason),
+P5/P6 are skipped and P4 → P7 is allowed.</p>
+<h2>Step 4 — Producer signature → P7 PRODUCER SIGNED</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producer signs through their attorney using a verified e-signature platform (with a certificate) or wet ink, scanned</td>
+<td>Signed PDF + certificate saved in <code>producer-signed/</code></td>
+<td><strong>P7</strong></td>
+<td>Confirm receipt</td>
+</tr>
+<tr>
+<td>Confirm the other side <strong>received</strong> the signature pages</td>
+<td>Their written acknowledgment saved</td>
+<td>P7</td>
+<td>None in 2 BD → FU1 (historical C3: pages sat 28 days)</td>
+</tr>
+</tbody>
+</table>
+<h2>Step 5 — Full execution → P8 FULLY EXECUTED</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Status</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Request the fully executed copy (<code>templates/missing-information-followup.md</code> Version C) if not received <strong>10 BD</strong> after P7</td>
+<td>Request saved</td>
+<td>P7</td>
+<td>Standard clock</td>
+</tr>
+<tr>
+<td>When received, check <strong>every</strong> signature line: all parties, inducement letters, payment-direction letters, LOD exhibit</td>
+<td>Fully executed PDF + checklist saved</td>
+<td><strong>P8</strong></td>
+<td>Open payment.md Step 3 and soundexchange-lod.md Step 5</td>
+</tr>
+</tbody>
+</table>
+<p>"OK to pay," "we'll circle back with the fully executed copy," and a copy
+signed by both producers but not the label or artist are <strong>not</strong> P8.</p></div></section><section class="sopsec" id="sop-workflows-soundexchange-lod"><p class="src">Workflows · workflows/soundexchange-lod.md</p><div class="doc"><h1>Workflow 3 — SoundExchange Letter of Direction (LOD)</h1>
+<h2>What this is (operations view)</h2>
+<p>A SoundExchange LOD is signed by the <strong>featured artist</strong>. It directs
+SoundExchange to pay a share of the artist's digital-performance royalties
+to the producer's named payee. Only the artist can sign it, so the
+producer depends on the artist side to get it done. That's why Vox Nova
+requires it <strong>before</strong> the producer signs the producer agreement.</p>
+<p>Whether an LOD is due, and what percentage, is set by the producer
+agreement. The operator doesn't decide either one.</p>
+<h2>Timing rule</h2>
+<pre><code>P3 CONTRACTING ── request the LOD (Step 1)
+P4 EXECUTION VERSION ── LOD wording in the agreement reconciled
+P5 LOD GATE — HOLD ── producer does NOT sign
+P6 LOD RECEIVED ── artist-signed LOD + certificate verified
+P7 PRODUCER SIGNS
+</code></pre>
+<h2>Step 1 — Request (at P3) → LOD REQUESTED</h2>
+<table>
+<thead>
+<tr>
+<th>Who sends</th>
+<th>Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>To</td>
+<td>Artist attorney (or label business affairs if the artist attorney isn't known), cc producer attorney</td>
+</tr>
+<tr>
+<td>Template</td>
+<td><code>templates/lod-request.md</code> Version A</td>
+</tr>
+<tr>
+<td>Asks for</td>
+<td>(1) the LOD form SoundExchange will accept, filled in with the producer's payee entity and % from the agreement; (2) the artist's signature through a verified e-signature platform; (3) the <strong>Certificate of Completion</strong> for that envelope; (4) confirmation of who will submit it to SoundExchange</td>
+</tr>
+<tr>
+<td>Attachments</td>
+<td>Payee details sheet (entity legal name, contact email, and the SoundExchange account holder name, if known). <strong>No bank details.</strong></td>
+</tr>
+<tr>
+<td>Complete when</td>
+<td>The other side confirms in writing who is preparing the LOD</td>
+</tr>
+<tr>
+<td>No response</td>
+<td>Standard clock (3 / 3 / 2 BD) → E-13</td>
+</tr>
+</tbody>
+</table>
+<h2>Step 2 — Sent for signature → LOD SENT FOR SIGNATURE</h2>
+<p>Evidence: e-sign envelope notification, or the other side's email saying
+it was sent, with the date. Save it. This is <strong>not</strong> a signature.</p>
+<h2>Step 3 — Signed → LOD SIGNED BY ARTIST</h2>
+<p>Evidence: the LOD PDF with the artist's signature, saved as
+<code>YYYY-MM-DD_LOD_&lt;Artist&gt;_SIGNED.pdf</code>.
+If only "he signed it" arrives, reply with <code>lod-request.md</code> Version B
+(request the PDF + certificate).</p>
+<h2>Step 4 — Certificate verification → CERTIFICATE VERIFIED (= P6)</h2>
+<p>Save the Certificate of Completion as
+<code>YYYY-MM-DD_LOD-Certificate_&lt;Artist&gt;.pdf</code>, then fill in this sheet and
+save it as <code>LOD-Verification.md</code>:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>PASS / FAIL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The certificate is the platform's own audit/completion page (not a screenshot of an email)</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>The envelope/document ID on the certificate matches the LOD PDF (or the certificate lists the LOD document name)</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>The signer name on the certificate = the featured artist named on the LOD</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>The status shows <strong>Completed</strong>, with a completion timestamp</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>The signature on the LOD is a platform e-signature or wet ink — not a pasted image</td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Payee entity on the LOD = the SoundExchange payee in the executed/execution agreement</td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>The % on the LOD = the % in the agreement</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Song title(s) and artist name are spelled correctly; ISRC present if the form asks for it</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Retroactive/effective-date wording matches the agreement (if the agreement says anything about it)</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>Names are spelled exactly as in the contracting info (historical C3: a payment-direction letter had to be re-signed over a misspelled name)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Any FAIL → send <code>lod-request.md</code> Version C (correction request) and stay
+in P5. Checks 6, 7 or 9 FAIL → also escalate E-11.</p>
+<p>All PASS → <strong>P6 LOD RECEIVED</strong>. Tell the producer's attorney that the
+signature hold is lifted.</p>
+<h2>Step 5 — Submission to SoundExchange → SUBMITTED TO SOUNDEXCHANGE</h2>
+<p>After P8, confirm <strong>in writing who submits the LOD to SoundExchange</strong> (the
+artist side, the artist's attorney, or the producer side). Evidence: the
+submission email to SoundExchange, a SoundExchange case/ticket email, or a
+dated portal screenshot. No proof within 10 BD of P6 → FU1 to whoever
+agreed to submit.</p>
+<h2>Step 6 — Active confirmation → ACTIVE-CONFIRMED</h2>
+<p>Evidence: a SoundExchange email or dated portal screenshot showing the LOD
+active for the payee entity. Check every 10 BD until confirmed. After
+<strong>3 checks</strong> with no confirmation → escalate E-11.</p>
+<p>A signed LOD + certificate is not proof that SoundExchange has it on
+file. In a separate engagement, signed LODs existed that SoundExchange
+did not have.</p>
+<h2>Blockers &amp; escalation</h2>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artist side refuses to send the LOD before the producer signs</td>
+<td>E-10. The operator does not release the hold.</td>
+</tr>
+<tr>
+<td>LOD can't be obtained after FU2</td>
+<td>E-11</td>
+</tr>
+<tr>
+<td>Certificate missing but the signed PDF exists</td>
+<td>Stay in P5; Version B; E-11 at the end of the clock</td>
+</tr>
+<tr>
+<td>Release date ≤10 BD and still in P5</td>
+<td>E-12</td>
+</tr>
+<tr>
+<td>Payee entity on the LOD ≠ agreement</td>
+<td>E-11 (never "fix" it yourself)</td>
+</tr>
+</tbody>
+</table></div></section><section class="sopsec" id="sop-workflows-payment"><p class="src">Workflows · workflows/payment.md</p><div class="doc"><h1>Workflow 4 — Payment (Payment Track)</h1>
+<h2>Principles</h2>
+<ul>
+<li>Vox Nova <strong>tracks</strong> payment. It doesn't receive, hold or redirect a
+  producer's advance unless a signed agreement says so.</li>
+<li>One obligation = one row: producer advance, legal-fee invoice, any
+  other invoice.</li>
+<li>The amount due comes from the <strong>executed agreement</strong>, not from an email.</li>
+<li>Payment is <strong>confirmed</strong> only by a remittance or bank record showing
+  amount + payer + date, matched to the invoice.</li>
+</ul>
+<h2>Step 1 — Start vendor setup (at P2) → VENDOR SETUP IN PROGRESS</h2>
+<p>Historical cases show vendor paperwork holding up payment after the
+contract was done (C2 outdated tax form; C3 form rejected for its
+signature type and form version). Start it early.</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Evidence required</th>
+<th>Next action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ask label A&amp;R admin/payments which vendor forms they need for the producer's <strong>payee entity</strong> (<code>templates/payment-request.md</code> Version A)</td>
+<td>Sent email saved</td>
+<td>Standard clock</td>
+</tr>
+<tr>
+<td>Get the forms from the label <strong>this time</strong>. Never reuse an old copy (outdated versions get rejected).</td>
+<td>Blank forms saved in <code>05_Vendor_Setup/</code></td>
+<td>Producer completes them</td>
+</tr>
+<tr>
+<td>The producer (or their entity signer) completes and signs using a verified e-signature platform or wet ink. Notarization / ID only if the form asks.</td>
+<td>Completed forms saved</td>
+<td>Producer or attorney submits</td>
+</tr>
+<tr>
+<td>Check that the tax form (W-9 or equivalent) is current and in the payee entity's exact name</td>
+<td>Check noted in the record</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Label confirms the vendor record is created/approved</td>
+<td>Confirmation saved</td>
+<td><strong>VENDOR SETUP CONFIRMED</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Rejection → save the rejection, note the reason in the record, fix only
+what the label named, and resubmit on the form version the label sent
+with the rejection.</p>
+<h2>Step 2 — Confirm the payment route → ROUTE CONFIRMED</h2>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>PASS when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payee entity on the invoice = payee in the agreement's payment-direction letter (if any) = vendor record</td>
+<td>All three the same</td>
+</tr>
+<tr>
+<td>Only one active route for each obligation</td>
+<td>No second payment-direction letter, factoring/advance-company letter, or bank change is in progress</td>
+</tr>
+<tr>
+<td>Label has confirmed the route in writing</td>
+<td>Email saved</td>
+</tr>
+</tbody>
+</table>
+<p>Any second route (for example a third-party payment-direction letter, or
+a request for a new vendor form with different bank details) → <strong>E-09</strong>
+before anything is invoiced. Historical C3: two routes ran at once, which
+risked a double payment or a hold.</p>
+<h2>Step 3 — Invoice (at or after P8) → INVOICED</h2>
+<table>
+<thead>
+<tr>
+<th>Who sends</th>
+<th>Producer's entity or producer attorney (as the agreement says). The operator prepares; the producer approves.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>To</td>
+<td>Label payments contact named in the executed agreement / by business affairs</td>
+</tr>
+<tr>
+<td>Contains</td>
+<td>Invoice #, date, payee entity, song, artist, amount <strong>from the executed agreement</strong>, PO # if the label issued one</td>
+</tr>
+<tr>
+<td>Complete when</td>
+<td>The label acknowledges receipt in writing</td>
+</tr>
+<tr>
+<td>No response</td>
+<td>Standard clock → E-13</td>
+</tr>
+</tbody>
+</table>
+<p>Invoicing before P8 only with the Escalation Owner's written approval.</p>
+<h2>Step 4 — Chase to confirmed payment → PAYMENT PROMISED → PAID-CONFIRMED</h2>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Status</th>
+<th>Operator action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"OK to pay" / PO issued / "payment should go out by …"</td>
+<td>PAYMENT PROMISED</td>
+<td>Record the promised date</td>
+</tr>
+<tr>
+<td>Promised date passes, or 10 BD after acknowledgment with no date</td>
+<td>PAYMENT PROMISED</td>
+<td><code>payment-request.md</code> Version C (status request), then the standard clock</td>
+</tr>
+<tr>
+<td>Producer or attorney reports funds received</td>
+<td>—</td>
+<td>Ask for the remittance advice or bank line (amount, payer, date). A screenshot is OK, with account numbers hidden.</td>
+</tr>
+<tr>
+<td>Evidence matches invoice #, amount and payer</td>
+<td><strong>PAID-CONFIRMED</strong></td>
+<td>Save to <code>06_Payment/&lt;obligation&gt;/</code></td>
+</tr>
+<tr>
+<td>Amount differs, payer unclear, or a duplicate payment</td>
+<td>PAY-DISPUTED</td>
+<td>E-08</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Co-producer paid, producer client not:</strong> if the label confirms payment
+to another producer on the same song while ours is open (historical C2),
+send Version C the same day and start the clock at FU1.</p>
+<h2>Payment checklist</h2>
+<p>See <code>../checklists/payment-checklist.md</code>.</p></div></section><section class="sopsec" id="sop-workflows-pre-release-gate"><p class="src">Workflows · workflows/pre-release-gate.md</p><div class="doc"><h1>Workflow 5 — Pre-Release Gate (→ P9 RELEASE READY)</h1>
+<h2>What the gate does and doesn't do</h2>
+<p>The gate decides whether <strong>Vox Nova marks the placement RELEASE READY in
+its own records.</strong> It does not stop a label from releasing a song, and the
+operator never tells a label whether it can release. In every papered
+historical case (C1, C2, C3) the song came out before the paperwork was
+finished, so the gate's practical job is to <strong>escalate early</strong> and to
+record honestly what was outstanding when the song came out.</p>
+<h2>When to run it</h2>
+<ul>
+<li>Every time the release date is learned or changes</li>
+<li>Weekly for any placement with a release date</li>
+<li>Daily once the release is ≤10 BD away</li>
+<li>On release day</li>
+</ul>
+<h2>The gate</h2>
+<p>Use <code>../checklists/release-readiness-checklist.md</code>. Each line is PASS,
+FAIL or N/A (N/A only with the reason and the Escalation Owner's
+initials).</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>PASS evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Terms confirmed</td>
+<td>P2 confirmations saved; Contradiction Flag CLEARED</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Producer identities confirmed</td>
+<td>Every producer named, with a contracting entity; no unknown producer</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Publishing confirmed</td>
+<td>Share stated as each or total, in the executed agreement</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Master points confirmed</td>
+<td>Points/royalty + allocation in the executed agreement</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Samples cleared / confirmed none</td>
+<td>Producer's written answer; any sample has a clearance record from the label</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Other collaborators identified</td>
+<td>Written collaborator answer; no new names since</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Artist-signed LOD + certificate verified <strong>before</strong> the producer signed</td>
+<td>P6 date ≤ P7 date</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Contract fully executed</td>
+<td>P8 PDF, every signature line</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Payment status confirmed</td>
+<td>PAID-CONFIRMED, <strong>or</strong> vendor setup confirmed + route confirmed + invoice acknowledged, with written Escalation Owner acceptance that payment follows release</td>
+</tr>
+<tr>
+<td>10</td>
+<td>LOD submitted to SoundExchange</td>
+<td>Submission proof saved</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Documents stored</td>
+<td>Folder audit (SOP §6.4) passes for everything done so far</td>
+</tr>
+<tr>
+<td>12</td>
+<td>No unresolved producer-rights issue</td>
+<td>No open escalation; no open Contradiction Flag</td>
+</tr>
+</tbody>
+</table>
+<h2>Result</h2>
+<ul>
+<li><strong>All PASS (or approved N/A)</strong> → set <strong>P9 RELEASE READY</strong>.</li>
+<li><strong>Any FAIL</strong> → the record shows:</li>
+</ul>
+<pre><code>BLOCKED — DO NOT MARK RELEASE READY
+Failing items: #__, #__
+Release date: YYYY-MM-DD (__ BD away)
+Owner of each item: …
+</code></pre>
+<p>and:
+  - release <strong>&gt;10 BD</strong> away → run the normal follow-up clocks
+  - release <strong>≤10 BD</strong> away → escalate <strong>E-12</strong> the same day, and send
+    <code>templates/pre-release-clearance.md</code> to the label/artist attorney
+    only if the Escalation Owner approves
+  - release has <strong>happened</strong> → set <strong>RELEASED WITH OUTSTANDING ITEMS</strong>,
+    list the open items, and keep working the clocks toward P10</p>
+<p>Note: item 10 (submission) can PASS without SoundExchange confirming the
+LOD is active. Active confirmation is required for <strong>P10 COMPLETE</strong>, not
+P9.</p></div></section><section class="sopsec" id="sop-workflows-escalation"><p class="src">Workflows · workflows/escalation.md</p><div class="doc"><h1>Workflow 6 — Escalation</h1>
+<h2>How to escalate</h2>
+<ol>
+<li>Set the side status <strong>ESCALATED</strong> and log it in <code>00_Record/escalations.md</code>:</li>
+</ol>
+<pre><code>E-ID: E-__   Raised: YYYY-MM-DD   Placement: KM-____ — Artist — Song
+Trigger: (one sentence)
+Evidence: (file names)
+Options I can see: (optional — facts only, no recommendation on terms)
+Deadline pressure: release date / promised date
+Decision needed by: YYYY-MM-DD
+</code></pre>
+<ol start="2">
+<li>Send it to the <strong>Escalation Owner</strong> (README → Settings) the same
+   business day, with the evidence files attached or linked.</li>
+<li>Don't take any outside action on the escalated point until the
+   decision is written in the record. Other steps on the placement keep
+   running.</li>
+<li>No decision in <strong>2 BD</strong> → resend, marked "second request." No decision
+   in <strong>2 BD</strong> more → raise it at the next weekly review, first item.</li>
+</ol>
+<h2>Triggers</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Trigger</th>
+<th>Operator does NOT…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-01</td>
+<td>Deal terms conflict across emails, snapshots or parties (incl. "each" vs "total" publishing)</td>
+<td>pick the version that looks right</td>
+</tr>
+<tr>
+<td>E-02</td>
+<td>A producer's identity or contracting entity can't be verified</td>
+<td>guess the entity</td>
+</tr>
+<tr>
+<td>E-03</td>
+<td>Publishing percentages don't add up across all writers/producers</td>
+<td>adjust anyone's share</td>
+</tr>
+<tr>
+<td>E-04</td>
+<td>Master points / royalty don't add up</td>
+<td>adjust the allocation</td>
+</tr>
+<tr>
+<td>E-05</td>
+<td>A new collaborator, writer or producer appears</td>
+<td>add them to the split</td>
+</tr>
+<tr>
+<td>E-06</td>
+<td>A sample or interpolation is discovered</td>
+<td>describe its clearance status to the label</td>
+</tr>
+<tr>
+<td>E-07</td>
+<td>Execution version differs from confirmed terms, or an exhibit is missing / "to be provided separately"</td>
+<td>send the producer's signature</td>
+</tr>
+<tr>
+<td>E-08</td>
+<td>Payment amount ≠ agreed amount, payer unclear, or a duplicate payment</td>
+<td>tell anyone to return or keep money</td>
+</tr>
+<tr>
+<td>E-09</td>
+<td>More than one payment route, a payment-direction letter to a third party, or a bank-detail change</td>
+<td>submit any vendor/bank form</td>
+</tr>
+<tr>
+<td>E-10</td>
+<td>Anyone asks the producer to sign before the artist-signed LOD + certificate arrive</td>
+<td>release the hold</td>
+</tr>
+<tr>
+<td>E-11</td>
+<td>LOD can't be obtained, certificate missing after FU2, LOD payee/% ≠ agreement, or not active after 3 checks</td>
+<td>edit or resend the LOD</td>
+</tr>
+<tr>
+<td>E-12</td>
+<td>Release ≤10 BD away with any pre-release gate item FAIL, or the song released while items were open</td>
+<td>tell the label to stop or delay</td>
+</tr>
+<tr>
+<td>E-13</td>
+<td>No response after Follow-Up #2 on any request</td>
+<td>send a Follow-Up #3 on their own</td>
+</tr>
+<tr>
+<td>E-14</td>
+<td>Label, artist team or co-producer disputes the terms</td>
+<td>argue the terms</td>
+</tr>
+<tr>
+<td>E-15</td>
+<td>Anyone asks Vox Nova to sign, accept terms, give bank details or receive funds</td>
+<td>do it</td>
+</tr>
+<tr>
+<td>E-16</td>
+<td>A document has a misspelled name or wrong entity</td>
+<td>"fix" the document themselves</td>
+</tr>
+</tbody>
+</table>
+<h2>Priority</h2>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Triggers</th>
+<th>Owner response expected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Urgent</strong> (same day)</td>
+<td>E-10, E-12, E-09, E-15</td>
+<td>Same BD</td>
+</tr>
+<tr>
+<td><strong>High</strong></td>
+<td>E-01, E-05, E-06, E-07, E-08, E-11, E-14</td>
+<td>≤2 BD</td>
+</tr>
+<tr>
+<td><strong>Normal</strong></td>
+<td>E-02, E-03, E-04, E-13, E-16</td>
+<td>≤2 BD</td>
+</tr>
+</tbody>
+</table>
+<h2>Legal line</h2>
+<p>When the decision needs a legal, tax or accounting judgment, the
+Escalation Owner routes it to the producer's attorney or accountant. The
+operator writes down the decision and who made it, never the reasoning
+behind a legal position.</p></div></section><section class="sopsec" id="sop-intake-required-fields"><p class="src">Intake · intake/required-fields.md</p><div class="doc"><h1>Required Fields — Minimum Data by Stage</h1>
+<p>Missing a field on the list for a stage → the placement can't enter that
+stage. Use <code>templates/missing-information-followup.md</code> to ask for it.</p>
+<h2>A. To create a record (P0)</h2>
+<ul>
+<li>☐ Artist</li>
+<li>☐ Song (and any alternate title)</li>
+<li>☐ Producer client (Vox Nova)</li>
+<li>☐ Source: email subject + date, or file name + date</li>
+<li>☐ Who sent it (name, role, company, email)</li>
+</ul>
+<h2>B. To confirm terms (P2)</h2>
+<ul>
+<li>☐ Every producer on the song, with their rep</li>
+<li>☐ Advance total + currency</li>
+<li>☐ All-in: yes / no</li>
+<li>☐ Advance allocation (each producer's amount)</li>
+<li>☐ Master points / royalty total + allocation</li>
+<li>☐ Producer client's publishing share — <strong>each or total</strong> stated</li>
+<li>☐ Credit line (exact wording)</li>
+<li>☐ Samples: producer's written answer</li>
+<li>☐ Interpolations: producer's written answer</li>
+<li>☐ Other collaborators / writers: producer's written answer</li>
+<li>☐ Written confirmation from each producer (or their rep)</li>
+<li>☐ Label / distributor</li>
+<li>☐ Label business-affairs contact</li>
+</ul>
+<h2>C. Contracting information package (P3) — collected from the producer side</h2>
+<ul>
+<li>☐ Producer legal name + p/k/a</li>
+<li>☐ Contracting entity legal name (as registered) + entity type + state</li>
+<li>☐ Authorized signer name + title</li>
+<li>☐ Notice address + notice email</li>
+<li>☐ Producer attorney: firm, name, email</li>
+<li>☐ PRO + writer IPI (store as text, keep leading zeros)</li>
+<li>☐ Publishing designee / publisher name + publisher IPI (if any)</li>
+<li>☐ Payee entity for the advance (if different from the contracting entity, say why)</li>
+<li>☐ SoundExchange payee entity (the name the LOD will use)</li>
+<li>☐ Credit line as the producer wants it</li>
+<li>☐ Any session/legal-info/sample form the label sent, filled in</li>
+</ul>
+<p><strong>Never collected into the record:</strong> bank account/routing numbers, tax IDs,
+ID documents. Those go straight onto the label's own forms.</p>
+<h2>D. To reach the LOD gate (P5/P6)</h2>
+<ul>
+<li>☐ Artist attorney contact</li>
+<li>☐ Featured artist legal name (the LOD signer)</li>
+<li>☐ LOD payee entity + % (from the execution version)</li>
+<li>☐ Who will submit the LOD to SoundExchange</li>
+</ul>
+<h2>E. For payment</h2>
+<ul>
+<li>☐ Label payments / A&amp;R admin contact</li>
+<li>☐ Vendor forms the label requires (current versions)</li>
+<li>☐ Payee entity name exactly as on the tax form</li>
+<li>☐ PO # (if the label uses POs)</li>
+<li>☐ Invoice amount = executed agreement amount</li>
+</ul>
+<h2>F. For release</h2>
+<ul>
+<li>☐ Release date (actual or announced) + source</li>
+<li>☐ ISRC (if available)</li>
+</ul></div></section><section class="sopsec" id="sop-intake-placement-intake-template"><p class="src">Intake · intake/placement-intake-template.md</p><div class="doc"><h1>Placement Record — KM-<strong><em>_-</em></strong>_</h1>
+<blockquote>
+<p>Copy this file to <code>Placements/KM-YYYY-NNNN — Artist — Song/00_Record/placement-record.md</code>.
+<code>UNKNOWN</code> = no document states it. <code>N/A — reason (source)</code> only with a reason.
+Every term needs a Source: file name + date.</p>
+</blockquote>
+<p><strong>Status:</strong> P__ <strong><em>_</em></strong>_   <strong>Side status:</strong> <strong><em>_</em></strong>_
+<strong>Next action:</strong> <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_ <strong>Owner:</strong> <strong><em>_</em></strong>_ <strong>Due:</strong> <strong><em>_-</em>_-</strong>
+<strong>Last updated:</strong> <strong><em>_-</em>_-</strong> by ___</p>
+<hr />
+<h2>A. Placement</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artist</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Song (working / final)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Alternate titles</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Project</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Release date (announced/actual)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Label / distributor</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Label business affairs</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Label payments / A&amp;R admin</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Artist attorney</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Management</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Producer client</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Contracting entity</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Payee entity (advance)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>SoundExchange payee entity</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Producer attorney</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Co-producers (name — rep — entity)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Credit line</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>First source (subject, date)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>B. Deal — Term Snapshots</h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>TS-1 (date)</th>
+<th>TS-2 (date)</th>
+<th>Confirmed (TS-_)</th>
+<th>Quote / source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advance total</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>All-in?</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Advance allocation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Points / royalty total</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Point allocation</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Publishing — client share (each/total)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Writer / publisher share</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Other backend / fees</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contradiction Flag:</strong> OPEN / CLEARED — note: ______
+<strong>Confirmations:</strong> producer client ☐ (file) · co-producer 1 ☐ · co-producer 2 ☐ · …</p>
+<h2>C. Clearance</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Answer</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samples</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Interpolations</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Other collaborators</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Additional writers</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Additional producers</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sample / session / legal-info forms</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Stems requested / delivered</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>D. Contracting</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Date</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contracting info sent</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Drafts received (list)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Execution version received</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Terms Reconciliation PASS</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Exhibits outstanding</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LOD gate cleared (P6)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Producer signed (P7) + certificate</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Receipt of producer pages confirmed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Fully executed (P8)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>E. Payment</h2>
+<table>
+<thead>
+<tr>
+<th>Obligation</th>
+<th>Amount (per agreement)</th>
+<th>Payee</th>
+<th>Vendor setup</th>
+<th>Route confirmed</th>
+<th>Invoice # / date</th>
+<th>PO</th>
+<th>Status</th>
+<th>Paid date / amount</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producer advance</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Legal fee</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>F. SoundExchange</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Date</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOD required (Y/N — who decided)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LOD payee + %</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>LOD signer (artist)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Requested</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Sent for signature</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Signed by artist</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Certificate received</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Certificate verified (initials)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Submitted to SoundExchange (by whom)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Active confirmed</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>G. Release</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release date</td>
+<td></td>
+</tr>
+<tr>
+<td>Days to release (at last check)</td>
+<td></td>
+</tr>
+<tr>
+<td>Pre-release gate</td>
+<td>PASS / BLOCKED — DO NOT MARK RELEASE READY</td>
+</tr>
+<tr>
+<td>Outstanding items (one per line, with owner)</td>
+<td></td>
+</tr>
+<tr>
+<td>Final clearance status</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>H. Follow-up log</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>To</th>
+<th>Request</th>
+<th>FU level</th>
+<th>Response?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>I. Escalations</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Trigger</th>
+<th>Raised</th>
+<th>Decision</th>
+<th>Decided by / date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>J. Correspondence</h2>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Subject</th>
+<th>From → To</th>
+<th>Saved file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>K. What should be verified next (UNPAPERED records only)</h2>
+<p>-</p></div></section><section class="sopsec" id="sop-templates-producer-terms-confirmation"><p class="src">Email templates · templates/producer-terms-confirmation.md</p><div class="doc"><h1>Template — Producer Terms Confirmation (P1 → P2)</h1>
+<p><strong>Who sends:</strong> Operator
+<strong>To:</strong> Producer client (Version A) / each co-producer's rep (Version B)
+<strong>Cc:</strong> Producer attorney
+<strong>Attachments:</strong> none (terms quoted in the body)
+<strong>Counts as complete:</strong> a reply saying the terms are confirmed, referring to TS-__; sample + collaborator answers in writing
+<strong>No reply:</strong> FU1 at 3 BD → FU2 at +3 BD → escalate E-13 at +2 BD
+<strong>Escalate immediately if:</strong> the reply changes any number (E-01), names a new person (E-05), or mentions a sample (E-06)</p>
+<p>Fill <code>{{fields}}</code> <strong>only</strong> from the Term Snapshot. If a term is UNKNOWN,
+keep the line and write "Not yet stated — please confirm."</p>
+<hr />
+<h3>Version A — to the producer client</h3>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – please confirm terms (TS-{{n}})</p>
+<p>Hi {{Producer first name}},</p>
+<p>Below are the terms for "{{Song}}" by {{Artist}}, as sent by {{Sender / company}} on {{date}}. Please confirm that each line is correct, or tell us what's different.</p>
+<ul>
+<li>Advance: {{amount}} {{all-in / not all-in}}, split {{allocation}}</li>
+<li>Master points / royalty: {{total}}, split {{allocation}}</li>
+<li>Publishing: {{your share}} ({{each / total for all producers}})</li>
+<li>Credit: "{{credit line}}"</li>
+<li>Producers on the record: {{list}}</li>
+</ul>
+<p>Two more questions the label will need answered in writing:
+1. Were any samples or interpolations used? If yes, list the source for each.
+2. Did anyone else work on the production or writing (other producers, writers, musicians)?</p>
+<p>Please hold off on signing anything until we confirm the paperwork is complete.</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p>
+<hr />
+<h3>Version B — to a co-producer's rep</h3>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – split confirmation (TS-{{n}})</p>
+<p>Hi {{Name}},</p>
+<p>We represent {{Producer client}} on "{{Song}}" by {{Artist}}. To keep the paperwork moving with {{label / attorney}}, can you confirm the split as we have it?</p>
+<ul>
+<li>Advance: {{amount}} {{all-in}}, split {{allocation}}</li>
+<li>Points: {{total}}, split {{allocation}}</li>
+<li>Publishing: {{as stated}}</li>
+<li>Credit: "{{credit line}}"</li>
+</ul>
+<p>A quick "confirmed" is all we need. If anything is different, please tell us what you have.</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p></div></section><section class="sopsec" id="sop-templates-contracting-info-request"><p class="src">Email templates · templates/contracting-info-request.md</p><div class="doc"><h1>Template — Contracting Information (P2 → P3)</h1>
+<hr />
+<h3>Version A — request TO the producer side (inbound collection)</h3>
+<p><strong>Who sends:</strong> Operator → producer client, cc producer attorney
+<strong>Attachments:</strong> none
+<strong>Counts as complete:</strong> every item in <code>intake/required-fields.md</code> §C answered
+<strong>No reply:</strong> FU1 3 BD → FU2 +3 BD → E-13 +2 BD</p>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – contracting info needed</p>
+<p>Hi {{Producer first name}},</p>
+<p>The terms are confirmed. To have the agreement drafted, the label needs:</p>
+<ol>
+<li>Your legal name and producer name</li>
+<li>The company that signs (exact registered name, entity type, state) and who signs for it</li>
+<li>Notice address and email</li>
+<li>Your attorney's name, firm and email</li>
+<li>Your PRO and IPI number</li>
+<li>Your publishing company / designee and its IPI (if any)</li>
+<li>The company that should receive the advance (if it's different from #2, let us know why)</li>
+<li>The company name to use as SoundExchange payee on the artist's Letter of Direction</li>
+</ol>
+<p>Please <strong>don't</strong> email bank or tax ID numbers. Those go directly on the label's vendor forms when they send them.</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p>
+<hr />
+<h3>Version B — package TO the label (outbound), with the LOD request</h3>
+<p><strong>Who sends:</strong> Operator → label business affairs (and artist attorney if drafting), cc producer attorney
+<strong>Attachments:</strong> none required; attach the label's own session/legal-info form if they sent one
+<strong>Counts as complete:</strong> written acknowledgment, or a first draft received
+<strong>No reply:</strong> FU1 3 BD → FU2 +3 BD → E-13 +2 BD</p>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – producer contracting info ({{Producer p/k/a}})</p>
+<p>Hi {{Name}},</p>
+<p>Here is the contracting information for {{Producer p/k/a}} on "{{Song}}":</p>
+<ul>
+<li>Producer: {{legal name}} p/k/a {{p/k/a}}</li>
+<li>Contracting entity: {{entity}}, {{type}}, {{state}} — signer: {{name, title}}</li>
+<li>Notice: {{address}} / {{email}}</li>
+<li>Counsel: {{attorney, firm, email}}</li>
+<li>PRO / IPI: {{PRO}} / {{IPI}}</li>
+<li>Publishing designee: {{publisher}} ({{IPI}})</li>
+<li>Advance payee: {{entity}}</li>
+<li>SoundExchange LOD payee: {{entity}}</li>
+<li>Credit: "{{credit line}}"</li>
+</ul>
+<p><strong>SoundExchange Letter of Direction:</strong> please send the artist's LOD to {{SoundExchange payee}} for signature along with the draft. The producer will sign the agreement once the artist-signed LOD and its e-signature certificate of completion have been received.</p>
+<p>Please also send the vendor forms needed to set up {{payee entity}} so we can have them completed early.</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p></div></section><section class="sopsec" id="sop-templates-lod-request"><p class="src">Email templates · templates/lod-request.md</p><div class="doc"><h1>Template — SoundExchange LOD</h1>
+<p><strong>Who sends:</strong> Operator
+<strong>To:</strong> Artist attorney (or label business affairs if unknown)
+<strong>Cc:</strong> Producer attorney
+<strong>Attachments:</strong> payee details sheet (entity legal name, contact email, SoundExchange account holder name if known) — <strong>no bank details</strong>
+<strong>Counts as complete:</strong> artist-signed LOD PDF + Certificate of Completion that pass <code>workflows/soundexchange-lod.md</code> §4
+<strong>No reply:</strong> FU1 3 BD → FU2 +3 BD → E-11 +2 BD
+<strong>Escalate immediately if:</strong> asked to have the producer sign first (E-10); payee or % differs from the agreement (E-11)</p>
+<hr />
+<h3>Version A — initial request (sent at P3, or with contracting info)</h3>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – SoundExchange LOD for {{Producer p/k/a}}</p>
+<p>Hi {{Name}},</p>
+<p>Per the producer agreement for "{{Song}}", please prepare the artist's SoundExchange Letter of Direction in favor of {{SoundExchange payee entity}} at {{% per agreement}} and route it to {{Artist legal name}} for e-signature.</p>
+<p>Once it's completed, please send us:
+1. the signed LOD (PDF), and
+2. the e-signature Certificate of Completion for that envelope.</p>
+<p>{{Producer p/k/a}} will sign the producer agreement once both are received. Please also let us know who will submit the LOD to SoundExchange.</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p>
+<hr />
+<h3>Version B — "it's signed" but documents missing</h3>
+<p><strong>Subject:</strong> RE: {{Artist}} – "{{Song}}" – SoundExchange LOD</p>
+<p>Hi {{Name}},</p>
+<p>Thanks for confirming. Could you send the signed LOD PDF and the Certificate of Completion from {{platform}}? We need both on file before {{Producer p/k/a}} signs.</p>
+<p>Thanks,
+{{Operator name}}</p>
+<hr />
+<h3>Version C — correction needed</h3>
+<p><strong>Subject:</strong> RE: {{Artist}} – "{{Song}}" – SoundExchange LOD correction</p>
+<p>Hi {{Name}},</p>
+<p>We reviewed the signed LOD. One item needs correcting before it can be submitted:</p>
+<ul>
+<li>{{exact item, e.g. "Payee is listed as X; the agreement names Y" / "Name spelled 'X' should be 'Y'"}}</li>
+</ul>
+<p>Could you send a corrected LOD for signature? {{Producer p/k/a}}'s signature remains on hold until the corrected LOD and its certificate are received.</p>
+<p>Thanks,
+{{Operator name}}</p>
+<hr />
+<h3>Version D — submission / active status (after P8)</h3>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – LOD submission to SoundExchange</p>
+<p>Hi {{Name}},</p>
+<p>Checking in on the LOD for "{{Song}}": has it been submitted to SoundExchange? If you have the submission confirmation or SoundExchange's case number, please forward it.</p>
+<p>Thanks,
+{{Operator name}}</p></div></section><section class="sopsec" id="sop-templates-payment-request"><p class="src">Email templates · templates/payment-request.md</p><div class="doc"><h1>Template — Payment</h1>
+<p><strong>Who sends:</strong> Operator (Versions A, C); the producer entity or producer attorney sends the invoice itself (Version B), prepared by the operator
+<strong>To:</strong> Label A&amp;R administration / payments contact
+<strong>Cc:</strong> Producer attorney
+<strong>Counts as complete:</strong> A = vendor forms received; B = invoice acknowledged; C = remittance (amount + payer + date)
+<strong>No reply:</strong> FU1 3 BD → FU2 +3 BD → E-13 +2 BD
+<strong>Escalate immediately if:</strong> a second payment route appears (E-09); the amount differs from the executed agreement (E-08)</p>
+<hr />
+<h3>Version A — vendor setup (at P2)</h3>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – vendor setup for {{payee entity}}</p>
+<p>Hi {{Name}},</p>
+<p>{{Producer p/k/a}} is producing "{{Song}}" for {{Artist}}. To avoid delays at payment, can you send the current vendor/payee forms you need for {{payee entity}}? We'll get them completed and returned.</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p>
+<hr />
+<h3>Version B — invoice cover (at/after P8)</h3>
+<p><strong>Subject:</strong> Invoice {{#}} – {{Artist}} – "{{Song}}" – {{payee entity}}</p>
+<p>Hi {{Name}},</p>
+<p>Attached is invoice {{#}} for {{amount}}, the {{obligation, e.g. producer advance}} for "{{Song}}" under the fully executed agreement dated {{date}}{{, PO {{#}}}}. Payment goes to {{payee entity}}, per the vendor record set up on {{date}}.</p>
+<p>Please confirm receipt and the expected payment date.</p>
+<p>Thanks,
+{{Name / entity}}</p>
+<hr />
+<h3>Version C — payment status</h3>
+<p><strong>Subject:</strong> RE: Invoice {{#}} – {{Artist}} – "{{Song}}"</p>
+<p>Hi {{Name}},</p>
+<p>Following up on invoice {{#}} ({{amount}}), submitted {{date}}{{ — you'd mentioned payment by {{promised date}}}}. Can you confirm whether it has been paid, and send the remittance advice with the payment date and amount?</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p></div></section><section class="sopsec" id="sop-templates-missing-information-followup"><p class="src">Email templates · templates/missing-information-followup.md</p><div class="doc"><h1>Template — Missing Information &amp; Follow-Ups</h1>
+<p><strong>Follow-up clock (all requests):</strong>
+- <strong>FU1</strong> — 3 BD after the original with no reply → reply <strong>on the same thread</strong>
+- <strong>FU2</strong> — 3 BD after FU1 → same thread, add the producer attorney if not copied
+- <strong>Escalate</strong> — 2 BD after FU2 → E-13. The operator never sends an FU3.</p>
+<p>Log every follow-up in the record (§H) with the date and FU level.</p>
+<hr />
+<h3>Version A — unpapered placement (P0-U)</h3>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – paperwork</p>
+<p>Hi {{Name}},</p>
+<p>Thanks for sending "{{Song}}". Before anything moves forward on {{Producer p/k/a}}'s production, can you tell us:</p>
+<ol>
+<li>Is the record being released, and through which label or distributor?</li>
+<li>Who is handling the producer paperwork on your side?</li>
+<li>Proposed terms (advance, points, publishing, credit)?</li>
+</ol>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p>
+<hr />
+<h3>Version B — FU1 / FU2 (any request)</h3>
+<p><strong>Subject:</strong> RE: {{original subject}}</p>
+<p>Hi {{Name}},</p>
+<p>Following up on the note below. We still need:</p>
+<ul>
+<li>{{item 1}}</li>
+<li>{{item 2}}</li>
+</ul>
+<p>{{FU2 only: "Copying {{attorney}} for visibility."}}</p>
+<p>Thanks,
+{{Operator name}}</p>
+<hr />
+<h3>Version C — fully executed copy</h3>
+<p><strong>Subject:</strong> RE: {{Artist}} – "{{Song}}" – fully executed agreement</p>
+<p>Hi {{Name}},</p>
+<p>{{Producer p/k/a}}'s signed pages went over on {{date}}. Can you send the fully executed agreement, with all signatures, when it's countersigned?</p>
+<p>Thanks,
+{{Operator name}}</p>
+<hr />
+<h3>Version D — receipt of signature pages (2 BD after P7)</h3>
+<p><strong>Subject:</strong> RE: {{Artist}} – "{{Song}}" – signature pages</p>
+<p>Hi {{Name}},</p>
+<p>Just confirming you received {{Producer p/k/a}}'s signed pages sent {{date}}.</p>
+<p>Thanks,
+{{Operator name}}</p></div></section><section class="sopsec" id="sop-templates-pre-release-clearance"><p class="src">Email templates · templates/pre-release-clearance.md</p><div class="doc"><h1>Template — Pre-Release Clearance</h1>
+<hr />
+<h3>Version A — internal gate result (always; to the Escalation Owner)</h3>
+<p><strong>Subject:</strong> [GATE] KM-{{id}} – {{Artist}} – "{{Song}}" – {{PASS / BLOCKED}} – release {{date}} ({{n}} BD)</p>
+<pre><code>Gate result: RELEASE READY
+        — or —
+BLOCKED — DO NOT MARK RELEASE READY
+
+Failing items:
+  #{{n}} {{item}} — owner: {{party}} — last action {{date}} ({{FU level}})
+  #{{n}} …
+
+Release date: {{date}} ({{n}} BD)
+Escalation: E-12 raised {{date}}
+Evidence folder: {{path}}
+</code></pre>
+<hr />
+<h3>Version B — open items notice to the label/artist attorney</h3>
+<p><strong>Send ONLY with the Escalation Owner's written approval.</strong>
+<strong>To:</strong> Label business affairs + artist attorney, cc producer attorney
+<strong>Counts as complete:</strong> each listed item delivered with evidence
+<strong>No reply:</strong> standard clock → back to the Escalation Owner</p>
+<p><strong>Subject:</strong> {{Artist}} – "{{Song}}" – open producer items before {{release date}}</p>
+<p>Hi {{Name}},</p>
+<p>Ahead of the {{release date}} release of "{{Song}}", these items for {{Producer p/k/a}} are still open on our side:</p>
+<ul>
+<li>{{e.g. Artist-signed SoundExchange LOD + certificate of completion}}</li>
+<li>{{e.g. Fully executed producer agreement}}</li>
+<li>{{e.g. Vendor setup confirmation for {{payee entity}}}}</li>
+</ul>
+<p>Can you let us know when we can expect each one?</p>
+<p>Thanks,
+{{Operator name}}
+Vox Nova Publishing, LLC</p>
+<p>(State only which items are open. Don't describe consequences, rights or
+legal positions.)</p></div></section><section class="sopsec" id="sop-checklists-operator-checklist"><p class="src">Checklists · checklists/operator-checklist.md</p><div class="doc"><h1>Operator Checklist — One Placement, Start to Finish</h1>
+<p>Format: <strong>ACTION → EVIDENCE REQUIRED → STATUS → NEXT ACTION</strong>
+Can't check a box? Don't move on. Follow the "if not" rule.
+Timers: FU1 = 3 BD, FU2 = +3 BD, escalate = +2 BD (SOP §5).</p>
+<h2>Stage 1 — Intake (P0 → P1)</h2>
+<ul>
+<li>☐ Search the tracker for the artist/song/alternate titles → no duplicate → — → create the record</li>
+<li>☐ Create the folder + record from the template → folder + <code>placement-record.md</code> → <strong>P0</strong> → save the source email</li>
+<li>☐ Save the source email as PDF → <code>99_Correspondence/…pdf</code> → P0 → decide whether there are terms</li>
+<li>☐ No written terms? → Version A sent (missing-information-followup) → <strong>P0-U</strong> → wait for terms; weekly review</li>
+<li>☐ Write Term Snapshot TS-1 with quotes → <code>01_Deal_Terms/TS-1…</code> → <strong>P1</strong> → check for contradictions</li>
+<li>☐ Compare with other emails/threads → Flag OPEN/CLEARED written down → P1 → if OPEN: <strong>E-01</strong></li>
+<li>☐ Every producer listed → list in the record → P1 → unknown name: <strong>E-05</strong></li>
+</ul>
+<h2>Stage 2 — Terms confirmation (P1 → P2)</h2>
+<ul>
+<li>☐ Send producer-terms-confirmation A to the client → sent email saved → P1 → clock</li>
+<li>☐ Send B to each co-producer rep → sent emails saved → P1 → clock</li>
+<li>☐ Producer's written sample answer → reply in <code>02_Clearance/</code> → P1 → sample found: <strong>E-06</strong></li>
+<li>☐ Producer's written collaborator answer → reply saved → P1 → new person: <strong>E-05</strong></li>
+<li>☐ Label sample / session / legal-info form returned (if sent) → returned form saved → P1 → —</li>
+<li>☐ All confirmations in, Flag CLEARED → files listed in the record → <strong>P2</strong> → Stage 3 + Payment A</li>
+</ul>
+<h2>Stage 3 — Contracting (P2 → P4)</h2>
+<ul>
+<li>☐ Contracting info collected (contracting-info A) → required-fields §C all filled → P2 → send package</li>
+<li>☐ Package + LOD request to the label (contracting-info B) → sent email saved → <strong>P3</strong> → clock</li>
+<li>☐ Vendor forms requested (payment-request A) → sent email saved → Payment: VENDOR SETUP IN PROGRESS → clock</li>
+<li>☐ Log each draft/redline → <code>03_Agreement/drafts/</code> → P3 → note who has the draft; clock on them</li>
+<li>☐ Execution version received → PDF in <code>execution-version/</code> → P3 → reconcile</li>
+<li>☐ Terms Reconciliation all MATCH → sheet saved → P3 → any DIFFERENT: <strong>E-07</strong></li>
+<li>☐ All exhibits present (none "to be provided separately") → exhibit list → P3 → missing: <strong>E-07</strong></li>
+<li>☐ Names/entities spelled correctly → name check PASS → <strong>P4</strong> → Stage 4</li>
+</ul>
+<h2>Stage 4 — LOD gate (P4 → P6) — producer does NOT sign here</h2>
+<ul>
+<li>☐ Hold email to the producer + attorney → saved → <strong>P5</strong> → chase the LOD</li>
+<li>☐ LOD requested (lod-request A), if not already done at P3 → saved → SX: LOD REQUESTED → clock</li>
+<li>☐ Envelope sent to the artist → notice saved → SX: SENT FOR SIGNATURE → clock</li>
+<li>☐ Artist-signed LOD PDF → <code>04_SoundExchange_LOD/…SIGNED.pdf</code> → SX: SIGNED BY ARTIST → get the certificate</li>
+<li>☐ Certificate of Completion → <code>…LOD-Certificate….pdf</code> → — → verify</li>
+<li>☐ Verification sheet (10 checks) all PASS → <code>LOD-Verification.md</code> → <strong>P6</strong> → tell the attorney the hold is lifted</li>
+<li>☐ Anyone asks the producer to sign first → email saved → P5 + ESCALATED → <strong>E-10</strong></li>
+</ul>
+<h2>Stage 5 — Execution (P6 → P8)</h2>
+<ul>
+<li>☐ Producer signs (verified e-sign or wet ink) → signed PDF + certificate → <strong>P7</strong> → confirm receipt</li>
+<li>☐ Receipt confirmed within 2 BD → acknowledgment saved → P7 → if none: missing-information D</li>
+<li>☐ Fully executed copy (ask at 10 BD with missing-information C) → PDF with every signature → <strong>P8</strong> → Stages 6 + 7</li>
+</ul>
+<h2>Stage 6 — Payment track</h2>
+<ul>
+<li>☐ Vendor setup confirmed by the label → confirmation saved → VENDOR SETUP CONFIRMED → —</li>
+<li>☐ Payment route confirmed (one payee, one route) → email saved → ROUTE CONFIRMED → second route: <strong>E-09</strong></li>
+<li>☐ Invoice prepared from the executed-agreement amount, producer approves, sent → invoice + send email → INVOICED → clock for acknowledgment</li>
+<li>☐ Promised date recorded → email saved → PAYMENT PROMISED → check on that date or at 10 BD</li>
+<li>☐ Remittance/bank proof (amount + payer + date) matched to the invoice → <code>06_Payment/…</code> → <strong>PAID-CONFIRMED</strong> → —</li>
+<li>☐ Mismatch → evidence saved → PAY-DISPUTED → <strong>E-08</strong></li>
+</ul>
+<h2>Stage 7 — SoundExchange track</h2>
+<ul>
+<li>☐ Who submits to SoundExchange, confirmed in writing → email saved → — → clock</li>
+<li>☐ Submission proof → saved → SUBMITTED → check active every 10 BD</li>
+<li>☐ Active confirmation → SoundExchange email / dated screenshot → <strong>ACTIVE-CONFIRMED</strong> → —</li>
+<li>☐ 3 checks, not active → — → <strong>E-11</strong></li>
+</ul>
+<h2>Stage 8 — Release gate</h2>
+<ul>
+<li>☐ Release date known → source saved → — → countdown on the record</li>
+<li>☐ Run the release-readiness checklist → gate sheet saved → <strong>P9</strong> or BLOCKED → if BLOCKED at ≤10 BD: <strong>E-12</strong></li>
+<li>☐ Released before P9 → release proof saved → RELEASED WITH OUTSTANDING ITEMS → keep working the clocks</li>
+</ul>
+<h2>Stage 9 — Close</h2>
+<ul>
+<li>☐ PAID-CONFIRMED + ACTIVE-CONFIRMED (or approved N/A) → evidence → — → folder audit</li>
+<li>☐ Six-month test (SOP §6.4) passes → audit noted in the record → — → hand-off</li>
+<li>☐ Registration hand-off sent (splits from the executed agreement) → email saved → <strong>P10 COMPLETE</strong> → archive the tracker row</li>
+</ul>
+<h2>Every Monday</h2>
+<ul>
+<li>☐ Open every record not at P10: update days to release, next action, owner, due date, FU level</li>
+<li>☐ Anything past its FU2 deadline → escalate (E-13)</li>
+<li>☐ Any release ≤10 BD with the gate BLOCKED → E-12</li>
+</ul></div></section><section class="sopsec" id="sop-checklists-payment-checklist"><p class="src">Checklists · checklists/payment-checklist.md</p><div class="doc"><h1>Payment Checklist — one per obligation</h1>
+<p>Placement: KM-<strong><em>_ — </em></strong><strong><em>_</em> — "</strong><strong><em>_</em>_"
+Obligation: ☐ Producer advance ☐ Legal fee ☐ Other: </strong>____</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Evidence file</th>
+<th>✓</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Amount due taken from the <strong>fully executed</strong> agreement (page/§ noted)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Payee entity = contracting info = payment-direction letter (if any)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Vendor forms are the label's <strong>current</strong> versions, requested this time</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Tax form current and in the payee entity's exact name</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Signatures on vendor forms are verified e-sign (with certificate) or wet ink — no pasted images</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Vendor record confirmed created/approved by the label, in writing</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Only ONE payment route for this obligation (no competing payment-direction letters or bank changes)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Label confirmed the route in writing</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>9</td>
+<td>PO # received (if the label uses POs)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Invoice: #, date, payee entity, song, artist, amount (= #1), PO</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Invoice approved by the producer before sending</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Invoice receipt acknowledged by the label</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Promised payment date recorded (if given)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Remittance / bank proof: <strong>amount + payer + date</strong></td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Amount received = invoice amount</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Stored in <code>06_Payment/&lt;obligation&gt;/</code></td>
+<td></td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Does NOT count as paid:</strong> "OK to pay" · PO issued · "should land by…" ·
+ACH notice without amount/payer · invoice sent · co-producer paid.</p>
+<p>Any ☐ at #2, #7 or #15 that can't be checked → escalate (E-09 / E-08).</p></div></section><section class="sopsec" id="sop-checklists-lod-checklist"><p class="src">Checklists · checklists/lod-checklist.md</p><div class="doc"><h1>SoundExchange LOD Checklist</h1>
+<p>Placement: KM-<strong><em>_ — </em></strong><strong><em>_</em> — "</strong>______"</p>
+<h2>Before the producer signs (P5 → P6)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Evidence file</th>
+<th>✓</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>LOD required = YES (or NO set by the Escalation Owner, with a reason)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>2</td>
+<td>LOD payee entity + % taken from the execution version</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>3</td>
+<td>LOD requested from the artist attorney/label (at P3)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Producer + attorney told in writing to hold signature</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Envelope sent to the artist (notice saved)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Artist-signed LOD PDF saved</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Certificate of Completion saved</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Certificate is the platform's own completion/audit page</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Envelope/document ID or document name matches the LOD</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Signer on the certificate = featured artist on the LOD</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Status "Completed" + timestamp</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Signature is platform e-sign or wet ink, not a pasted image</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Payee on the LOD = agreement</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>14</td>
+<td>% on the LOD = agreement</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Titles/names spelled correctly; ISRC if required</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Effective/retroactive wording matches the agreement (if any)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td><strong>→</strong></td>
+<td><strong>All ✓ = P6 LOD RECEIVED. The producer may sign.</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>After full execution</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Evidence file</th>
+<th>✓</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>17</td>
+<td>Who submits to SoundExchange, confirmed in writing</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Submission proof (email / case # / dated screenshot)</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Active at SoundExchange for the payee (check every 10 BD) — check 1 / 2 / 3</td>
+<td></td>
+<td>☐</td>
+</tr>
+<tr>
+<td>20</td>
+<td>All files in <code>04_SoundExchange_LOD/</code></td>
+<td></td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<p>"I sent it" ≠ #5. "He signed" ≠ #6. Signed LOD ≠ #7. Certificate ≠ #19.</p></div></section><section class="sopsec" id="sop-checklists-release-readiness-checklist"><p class="src">Checklists · checklists/release-readiness-checklist.md</p><div class="doc"><h1>Release-Readiness Checklist (Pre-Release Gate)</h1>
+<p>Placement: KM-<strong><em>_ — </em></strong><strong><em>_</em> — "</strong><strong><em>_</em>_"
+Release date: </strong><strong>-</strong>-<strong>   Business days away: ___   Checked: ____-</strong>-__ by ___</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Item</th>
+<th>PASS / FAIL / N/A*</th>
+<th>Evidence file</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Terms confirmed (all producers, Flag CLEARED)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Producer identities confirmed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Publishing confirmed (each/total stated in the executed agreement)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Master points confirmed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Samples cleared / confirmed none</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Other collaborators identified</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Artist-signed LOD + certificate verified <strong>before</strong> the producer signed</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Contract fully executed (every signature line)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>Payment status confirmed (PAID-CONFIRMED, or setup + route + invoice acknowledged with Escalation Owner acceptance)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>LOD submitted to SoundExchange</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Documents stored (folder audit so far)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>No unresolved producer-rights issue (no open escalation or Flag)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>*N/A only with a reason and the Escalation Owner's initials.</p>
+<hr />
+<p><strong>RESULT:</strong></p>
+<p>☐ <strong>RELEASE READY</strong> — all PASS / approved N/A → set P9<br />
+☐ <strong>BLOCKED — DO NOT MARK RELEASE READY</strong><br />
+   Failing: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_
+   ≤10 BD to release → E-12 raised <strong><em>_-</em>_-</strong>
+   Already released → RELEASED WITH OUTSTANDING ITEMS</p>
+<p><em>This is an internal operations status. It is not legal advice and not
+an instruction to any label about releasing the song.</em></p></div></section><section class="sopsec" id="sop-data-placement-schema"><p class="src">Data · data/placement-schema.md</p><div class="doc"><h1>Master Placement Record — Schema</h1>
+<p>One record per <strong>song × producer client</strong>. If the same song arrives in
+several threads, it is still <strong>one</strong> record; link each thread under
+<code>Correspondence</code>. If one email covers several songs, create one record per
+song and note "shared terms — see Term Snapshot in <song>" instead of
+copying the numbers.</p>
+<p>Fill-in copy: <code>../intake/placement-intake-template.md</code>.
+Spreadsheet version: <code>placement-tracker.csv</code> (one row per record).</p>
+<p><strong>Value rules</strong>
+- Write <code>UNKNOWN</code> when no document states it. Never guess.
+- Write <code>N/A</code> only with a reason, e.g. <code>N/A — no samples (producer email 2026-10-02)</code>.
+- Every term field has a <strong>Source</strong> sub-field: file name in the placement folder + date.
+- Dates are <code>YYYY-MM-DD</code>.
+- Percentages are written the way the document writes them, plus a
+  normalized value, e.g. <code>"25% of their shit split evenly" → UNRESOLVED</code>.</p>
+<hr />
+<h2>A. PLACEMENT</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Placement ID</td>
+<td>text</td>
+<td><code>KM-YYYY-NNNN</code> (year of intake + sequence)</td>
+</tr>
+<tr>
+<td>Artist</td>
+<td>text</td>
+<td>As billed on release</td>
+</tr>
+<tr>
+<td>Song</td>
+<td>text</td>
+<td>Working title + final title if different</td>
+</tr>
+<tr>
+<td>Alternate titles</td>
+<td>list</td>
+<td>e.g. "Luv U" / "Love You"</td>
+</tr>
+<tr>
+<td>Project</td>
+<td>text</td>
+<td>Album / EP / single / UNKNOWN</td>
+</tr>
+<tr>
+<td>Release date</td>
+<td>date</td>
+<td>Actual or announced; mark <code>(announced)</code> or <code>(actual)</code></td>
+</tr>
+<tr>
+<td>Label / distributor</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>Label business-affairs contact</td>
+<td>role + email</td>
+<td>Drafts/sends the agreement</td>
+</tr>
+<tr>
+<td>Label payment / vendor contact</td>
+<td>role + email</td>
+<td>Vendor forms, PO, remittance</td>
+</tr>
+<tr>
+<td>Artist attorney</td>
+<td>firm + email</td>
+<td></td>
+</tr>
+<tr>
+<td>Management</td>
+<td>text</td>
+<td></td>
+</tr>
+<tr>
+<td>Producer client (Vox Nova)</td>
+<td>text</td>
+<td>Legal name + p/k/a</td>
+</tr>
+<tr>
+<td>Producer's contracting entity</td>
+<td>text</td>
+<td>Entity that signs the agreement</td>
+</tr>
+<tr>
+<td>Producer's payee entity</td>
+<td>text</td>
+<td>Entity that receives the advance — may differ from contracting entity</td>
+</tr>
+<tr>
+<td>Producer's SoundExchange payee</td>
+<td>text</td>
+<td>Entity named on the LOD — may differ again</td>
+</tr>
+<tr>
+<td>Producer attorney</td>
+<td>firm + email</td>
+<td></td>
+</tr>
+<tr>
+<td>Co-producers</td>
+<td>list</td>
+<td>Name, rep, contracting entity, each</td>
+</tr>
+<tr>
+<td>Credit line</td>
+<td>text</td>
+<td>Exact wording, e.g. "Produced by X &amp; Y"</td>
+</tr>
+<tr>
+<td>Source of placement</td>
+<td>text</td>
+<td>First email / file, date</td>
+</tr>
+</tbody>
+</table>
+<h2>B. DEAL (from Term Snapshots — latest confirmed version)</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Term Snapshot version</td>
+<td><code>TS-1</code>, <code>TS-2</code>, … Never overwrite an earlier snapshot.</td>
+</tr>
+<tr>
+<td>Advance (total)</td>
+<td>Amount + currency</td>
+</tr>
+<tr>
+<td>All-in?</td>
+<td>YES / NO / UNKNOWN</td>
+</tr>
+<tr>
+<td>Advance allocation</td>
+<td>Split method + each producer's dollar amount</td>
+</tr>
+<tr>
+<td>Master royalty / points (total)</td>
+<td>e.g. 3 points / 4%</td>
+</tr>
+<tr>
+<td>Point allocation</td>
+<td>Each producer</td>
+</tr>
+<tr>
+<td>Publishing (producer client share)</td>
+<td>% + whether it is <strong>each</strong> producer or <strong>total</strong> for all producers</td>
+</tr>
+<tr>
+<td>Writer share / publisher share</td>
+<td>If stated separately</td>
+</tr>
+<tr>
+<td>Other backend / fees</td>
+<td>e.g. legal fee invoice, other invoices</td>
+</tr>
+<tr>
+<td>Contradiction Flag</td>
+<td>OPEN / CLEARED. OPEN if any field differs between snapshots or between parties.</td>
+</tr>
+<tr>
+<td>Confirmation evidence</td>
+<td>File name of each producer's written confirmation</td>
+</tr>
+</tbody>
+</table>
+<h2>C. CLEARANCE</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Samples</td>
+<td>NONE (confirmed) / YES — list / UNKNOWN</td>
+</tr>
+<tr>
+<td>Sample form / clearance sheet</td>
+<td>File + date returned</td>
+</tr>
+<tr>
+<td>Interpolations</td>
+<td>same as above</td>
+</tr>
+<tr>
+<td>Other collaborators</td>
+<td>List + role</td>
+</tr>
+<tr>
+<td>Additional writers</td>
+<td>List</td>
+</tr>
+<tr>
+<td>Additional producers</td>
+<td>List (anyone not in Co-producers above = trigger E-05)</td>
+</tr>
+<tr>
+<td>Session / legal-info form</td>
+<td>Requested? Returned? File</td>
+</tr>
+<tr>
+<td>Stems delivered</td>
+<td>Requested date / delivered date / to whom / evidence</td>
+</tr>
+</tbody>
+</table>
+<h2>D. CONTRACTING</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contract type</td>
+<td>Producer agreement / deal memo / amendment / other</td>
+</tr>
+<tr>
+<td>Contract status</td>
+<td>Mirrors placement status P3–P8</td>
+</tr>
+<tr>
+<td>Drafts received</td>
+<td>List: date, version, from</td>
+</tr>
+<tr>
+<td>Execution version date</td>
+<td></td>
+</tr>
+<tr>
+<td>Terms Reconciliation</td>
+<td>PASS / FAIL + file</td>
+</tr>
+<tr>
+<td>LOD gate cleared date</td>
+<td>Date P6 reached</td>
+</tr>
+<tr>
+<td>Producer signed date</td>
+<td>+ certificate file</td>
+</tr>
+<tr>
+<td>Fully executed date</td>
+<td>+ file</td>
+</tr>
+<tr>
+<td>Exhibits requiring signatures</td>
+<td>List each (e.g. inducement, payment-direction letter, LOD exhibit) + status</td>
+</tr>
+<tr>
+<td>Exhibits "to be provided separately"</td>
+<td>List + received date (open = trigger E-07)</td>
+</tr>
+<tr>
+<td>Contract location</td>
+<td>Folder path</td>
+</tr>
+</tbody>
+</table>
+<h2>E. PAYMENT (one block per obligation)</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Obligation</td>
+<td>Producer advance / legal fee / other</td>
+</tr>
+<tr>
+<td>Amount due</td>
+<td>From the <strong>executed agreement</strong>, not an email</td>
+</tr>
+<tr>
+<td>Payee entity</td>
+<td>Must match the payment-direction letter, if one exists</td>
+</tr>
+<tr>
+<td>Payment route</td>
+<td>Bank/processor — record route <strong>name only</strong>, never account numbers</td>
+</tr>
+<tr>
+<td>Competing routes?</td>
+<td>YES / NO. YES = trigger E-09</td>
+</tr>
+<tr>
+<td>W-9 / tax form</td>
+<td>Sent date; current? (portal "outdated tax form" notices count)</td>
+</tr>
+<tr>
+<td>Vendor setup</td>
+<td>Form name, submitted date, rejected (reason), approved date</td>
+</tr>
+<tr>
+<td>Invoice # / date / amount</td>
+<td></td>
+</tr>
+<tr>
+<td>PO #</td>
+<td>If the label uses POs</td>
+</tr>
+<tr>
+<td>Payment Track status</td>
+<td>See status-definitions §2</td>
+</tr>
+<tr>
+<td>Payment date / amount received</td>
+<td>From remittance or bank record</td>
+</tr>
+<tr>
+<td>Payment evidence</td>
+<td>File name</td>
+</tr>
+</tbody>
+</table>
+<h2>F. SOUNDEXCHANGE</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LOD required</td>
+<td>YES / NO / UNKNOWN. Default YES for any master-royalty deal; only the Escalation Owner sets NO.</td>
+</tr>
+<tr>
+<td>LOD source</td>
+<td>Exhibit in the agreement / standalone</td>
+</tr>
+<tr>
+<td>LOD payee entity + %</td>
+<td>As written on the LOD</td>
+</tr>
+<tr>
+<td>Who signs the LOD</td>
+<td>Artist (featured performer) name</td>
+</tr>
+<tr>
+<td>LOD requested date</td>
+<td></td>
+</tr>
+<tr>
+<td>LOD sent date</td>
+<td></td>
+</tr>
+<tr>
+<td>LOD signed date</td>
+<td></td>
+</tr>
+<tr>
+<td>Certificate of Completion received</td>
+<td>date + file</td>
+</tr>
+<tr>
+<td>Certificate verified</td>
+<td>PASS / FAIL + checker initials + date</td>
+</tr>
+<tr>
+<td>Certificate stored</td>
+<td>Folder path</td>
+</tr>
+<tr>
+<td>Submitted to SoundExchange</td>
+<td>Who / date / evidence</td>
+</tr>
+<tr>
+<td>Active confirmed</td>
+<td>Date + evidence</td>
+</tr>
+</tbody>
+</table>
+<h2>G. RELEASE</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release date</td>
+<td></td>
+</tr>
+<tr>
+<td>Days until release</td>
+<td>Recomputed at every check-in</td>
+</tr>
+<tr>
+<td>Pre-release gate status</td>
+<td>PASS / BLOCKED</td>
+</tr>
+<tr>
+<td>Outstanding items</td>
+<td>Bullet list — one line each, with owner</td>
+</tr>
+<tr>
+<td>Final clearance status</td>
+<td>RELEASE READY / RELEASED WITH OUTSTANDING ITEMS / COMPLETE</td>
+</tr>
+</tbody>
+</table>
+<h2>H. CONTROL</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Placement status</td>
+<td>P0–P10 + side status</td>
+</tr>
+<tr>
+<td>Next action</td>
+<td>One sentence + due date</td>
+</tr>
+<tr>
+<td>Next action owner</td>
+<td>Operator / producer / producer attorney / label / artist attorney</td>
+</tr>
+<tr>
+<td>Follow-up counter</td>
+<td>FU0 / FU1 / FU2 per open request</td>
+</tr>
+<tr>
+<td>Escalations</td>
+<td>ID, trigger, date raised, decision, date decided</td>
+</tr>
+<tr>
+<td>Correspondence</td>
+<td>Thread subjects + dates + links</td>
+</tr>
+<tr>
+<td>Last updated</td>
+<td>date + initials</td>
+</tr>
+</tbody>
+</table></div></section><section class="sopsec" id="sop-data-historical-basis"><p class="src">Data · data/historical-basis.md</p><div class="doc"><h1>Historical Basis — Why the SOP Is Built This Way</h1>
+<p>This SOP was built from four email audits of past producer placements
+(Sep 2026). People's names and deal amounts are left out on purpose; the
+full audits are kept separately by the Escalation Owner.</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>Placement</th>
+<th>What the record showed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td>Case 1 (major label, 2025–26)</td>
+<td>Terms by email in 6 days. Execution version arrived <strong>4 months</strong> later. Producer signed Jan 20; fully executed copy <strong>46 days</strong> after that. Song was already out before execution. Invoice sent <strong>54 days</strong> after execution; <strong>11 weeks</strong> after the invoice, repeated follow-ups still had no payment and no reply. <strong>No SoundExchange LOD ever started.</strong> No W-9 request found. Publishing % never stated in email.</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>Case 2 (major label, 2024)</td>
+<td>Terms changed across <strong>3 versions</strong>; the publishing wording contradicted itself ("25% each" vs "25% split evenly") and was never resolved in writing. The label asked for sample details; the producer side never answered in writing. Agreement came <strong>5 months</strong> after terms; producer signed the next day; no fully executed copy found. Co-producer's invoice got a rush; the producer's invoice got no reply. A label tax-portal notice said the tax form was outdated. <strong>No LOD ever raised.</strong></td>
+</tr>
+<tr>
+<td>C3</td>
+<td>Case 3 (major label, 2026)</td>
+<td>Artist's attorney wouldn't draft for <strong>63 days</strong> until the co-producer's team confirmed the equal split; the producer's attorney followed up about 11 times. Producer signed before the artist's LOD arrived, then asked for the LOD certificate of completion <strong>3 times</strong> (Aug 3, Aug 31, Sep 10). <strong>None received.</strong> Producer's signed pages sat <strong>28 days</strong> without being received. Label vendor form rejected (drawn signature, outdated form version). <strong>Two payment routes</strong> ran at once (contract payee vs a separate payment-direction letter), and one of those letters needed re-signing because the name was misspelled. "OK to pay" Sep 10 → PO Sep 21 → "should land Wednesday" Sep 28 → no receipt found. Song released and later taken down while unpapered.</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>Case 4 (independent)</td>
+<td>Only an audio file. No terms, contract, invoice or LOD in the mailbox. Possible terms sit inside publisher amendment and statement attachments that nobody has opened. A different song with the same title exists.</td>
+</tr>
+</tbody>
+</table>
+<h2>Lessons → controls</h2>
+<table>
+<thead>
+<tr>
+<th>Lesson (case)</th>
+<th>Control in this SOP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Producer signed first and lost all leverage to get the artist's LOD (C3).</td>
+<td><strong>LOD GATE (P5):</strong> the artist-signed LOD + certificate must be received before the producer signs.</td>
+</tr>
+<tr>
+<td>LOD never raised at all (C1, C2).</td>
+<td>LOD Required defaults to YES; LOD is requested when contracting starts, not after release.</td>
+</tr>
+<tr>
+<td>Signed LODs are not the same as LODs on file at SoundExchange (seen in a separate engagement).</td>
+<td>SoundExchange Track ends at ACTIVE-CONFIRMED, not at "signed."</td>
+</tr>
+<tr>
+<td>Co-producer split unconfirmed → 63-day drafting stall (C3).</td>
+<td>P2 requires written confirmation from <strong>every</strong> producer before contracting info goes out.</td>
+</tr>
+<tr>
+<td>Terms drifted across versions; publishing contradiction never fixed (C2).</td>
+<td>Numbered Term Snapshots, never overwritten; Contradiction Flag blocks P2.</td>
+</tr>
+<tr>
+<td>Sample question unanswered by producer side (C2).</td>
+<td>P2 requires the producer's own written sample answer.</td>
+</tr>
+<tr>
+<td>"Fully executed" assumed from an email; PDF never opened (C1). Fully executed copy never received (C2, C3).</td>
+<td>P8 requires the fully executed PDF with every signature line checked.</td>
+</tr>
+<tr>
+<td>Signed pages lost in transit for 28 days (C3).</td>
+<td>After producer signature: confirm receipt within 2 business days.</td>
+</tr>
+<tr>
+<td>Vendor form rejected for signature type and outdated form (C3); tax form outdated (C2).</td>
+<td>Vendor setup starts at P2; verified e-signature only; always use the form version the label sends <em>this time</em>.</td>
+</tr>
+<tr>
+<td>Two payment routes at once; misspelled name on a payment-direction letter (C3).</td>
+<td>ROUTE CONFIRMED status; any second route = escalation E-09; name check on every signed document.</td>
+</tr>
+<tr>
+<td>"OK to pay", PO, "should land" treated as progress (C3).</td>
+<td>PAYMENT PROMISED ≠ PAID-CONFIRMED.</td>
+</tr>
+<tr>
+<td>Invoice silence for 11 weeks (C1); co-producer paid first (C2).</td>
+<td>Fixed payment follow-up clock; escalate at FU2.</td>
+</tr>
+<tr>
+<td>Songs released before paperwork in every papered case (C1, C2, C3).</td>
+<td>Release-date countdown triggers escalation at 10 business days; RELEASED WITH OUTSTANDING ITEMS status.</td>
+</tr>
+<tr>
+<td>Audio-only "placement" (C4).</td>
+<td>UNPAPERED status; never assume a deal exists.</td>
+</tr>
+<tr>
+<td>Facts inside unopened attachments (C1, C2, C4).</td>
+<td>Terms are taken from the executed PDF, not from email summaries.</td>
+</tr>
+</tbody>
+</table>
+<h2>Where the follow-up timing comes from</h2>
+<p>The historical record shows long silences (weeks to months), not a working
+cadence, so the timers in this SOP are <strong>Vox Nova policy</strong>, set tighter
+than history on purpose:</p>
+<ul>
+<li>Standard request: FU1 at 3 business days, FU2 3 business days later, escalate 2 business days after FU2 (8 business days total).</li>
+<li>Payment: first check 10 business days after the invoice is acknowledged (or on the date the label promised, if sooner).</li>
+<li>Release countdown: escalate at ≤10 business days to release with any gate item open.</li>
+</ul>
+<p>The Escalation Owner can change these in <code>../README.md</code> → Settings.</p></div></section></div></div>
+</section>
+
+<section class="panel" id="downloads">
+ <p class="eyebrow">Downloads</p><h2>Printable PDFs</h2><div class="rule"></div>
+ <div class="dl"><a class="main" href="downloads/Keyman_Producer_Placement_SOP_v1.0.pdf">Master SOP — Producer Placement Operations (full)<span>PDF</span></a><a href="downloads/cards/01-placement-overview.pdf">01 — Placement Overview<span>PDF</span></a><a href="downloads/cards/02-new-placement-intake.pdf">02 — New Placement Intake<span>PDF</span></a><a href="downloads/cards/03-deal-terms-checklist.pdf">03 — Deal Terms Checklist<span>PDF</span></a><a href="downloads/cards/04-contract-signature-checklist.pdf">04 — Contract &amp; Signature Checklist<span>PDF</span></a><a href="downloads/cards/05-invoice-payment-checklist.pdf">05 — Invoice &amp; Payment Checklist<span>PDF</span></a><a href="downloads/cards/06-lod-soundexchange-checklist.pdf">06 — LOD / SoundExchange Checklist<span>PDF</span></a><a href="downloads/cards/07-release-tracking-checklist.pdf">07 — Release Tracking Checklist<span>PDF</span></a><a href="downloads/cards/08-follow-up-templates.pdf">08 — Follow-Up Templates<span>PDF</span></a><a href="downloads/cards/09-common-problems-escalations.pdf">09 — Common Problems &amp; Escalations<span>PDF</span></a><a href="downloads/cards/10-placement-closeout.pdf">10 — Placement Closeout<span>PDF</span></a><a href="downloads/cards/11-employee-do-don-t.pdf">11 — Employee Do / Don&#x27;t<span>PDF</span></a><a href="downloads/cards/12-placement-record-template.pdf">12 — Placement Record Template<span>PDF</span></a><a href="downloads/cards/13-manager-admin-reference.pdf">13 — Manager / Admin Reference<span>PDF</span></a></div>
+</section>
+
+</main>
+<footer><div class="wrap"><div class="wm">KEYMAN</div>
+<p>© 2026 Keyman Publishing, LLC · Licensed to Vox Nova, LLC. Internal operations document for Vox Nova staff. Operations controls only, not legal, tax or accounting advice.<br>v1.0 · 2026-09-30 · rev 1</p></div></footer>
+<script>
+const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
+function show(id,scroll){if(!document.getElementById(id))id='overview';
+ tabs.forEach(t=>t.setAttribute('aria-selected',t.dataset.p===id));panels.forEach(p=>p.classList.toggle('active',p.id===id));
+ if(scroll!==false)window.scrollTo({top:0});}
+tabs.forEach(t=>t.onclick=()=>{history.replaceState(null,'','#'+t.dataset.p);show(t.dataset.p)});
+document.querySelectorAll('[data-go]').forEach(a=>a.onclick=e=>{e.preventDefault();const [p,c]=a.dataset.go.split(':');history.replaceState(null,'','#'+p);show(p);
+ if(c){const d=document.getElementById(c);if(d){d.open=true;setTimeout(()=>d.scrollIntoView({behavior:'smooth',block:'start'}),30)}}});
+const h=location.hash.slice(1);show(h.startsWith('card-')?'cards':(h.startsWith('sop-')?'sop':h||'overview'),false);
+if(h.startsWith('card-')){const d=document.getElementById(h);if(d){d.open=true;setTimeout(()=>d.scrollIntoView(),50)}}
+</script>
+</body></html>
