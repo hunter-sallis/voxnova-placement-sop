@@ -77,7 +77,7 @@ details.card[open]>summary .x:after{content:" ▲"} details.card:not([open])>sum
 .doc blockquote{margin:14px 0;padding:12px 18px;background:var(--acc-soft);border-left:2px solid var(--acc)}
 .doc blockquote p{margin:4px 0;font:500 18px/1.4 "Cormorant Garamond",Georgia,serif}
 .doc hr{border:0;border-top:1px dashed var(--line);margin:18px 0}
-.sop{display:grid;grid-template-columns:230px 1fr;gap:36px;margin-top:10px}
+.sop{display:grid;grid-template-columns:230px minmax(0,1fr);gap:36px;margin-top:10px} .sop>*{min-width:0}
 .toc{position:sticky;top:120px;align-self:start;max-height:calc(100vh - 140px);overflow:auto;font-size:13px}
 .toc b{display:block;font:700 9.5px/1 "Manrope",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin:16px 0 6px}
 .toc a{display:block;color:var(--sub);font-weight:500;padding:3px 0} .toc a:hover{color:var(--ink)}
@@ -91,12 +91,12 @@ details.card[open]>summary .x:after{content:" ▲"} details.card:not([open])>sum
 .dl a.main{grid-column:1/-1;background:var(--cream)}
 footer{background:var(--ftr);color:#cfd3d6;padding:34px 0;margin-top:30px}
 footer .wm{color:#fff} footer p{margin:8px 0 0;font-size:12.5px;line-height:1.6;color:#aeb4b8}
-@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(odd){border-left:0}.catgrid{grid-template-columns:repeat(2,1fr)}.sop{grid-template-columns:1fr}.toc{position:static;max-height:none}.steps{grid-template-columns:1fr}.dl{grid-template-columns:1fr}}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(odd){border-left:0}.catgrid{grid-template-columns:repeat(2,1fr)}.sop{grid-template-columns:minmax(0,1fr)}.toc{position:static;max-height:none}.steps{grid-template-columns:1fr}.dl{grid-template-columns:1fr}}
 @media (max-width:560px){.wrap{padding:0 16px}.hdr-r{display:none}.catgrid{grid-template-columns:1fr}.doc{padding:6px 14px 18px}details.card>summary{grid-template-columns:40px 1fr;padding:14px}details.card>summary .x{display:none}}
 </style></head><body>
 <header class="hdr"><div class="wrap">
  <div class="top"><div><div class="wm">KEYMAN</div><div class="wm-sub">Music Metadata Consultant</div></div>
- <div class="hdr-r">Licensed to Vox Nova, LLC<br><span class="badge">v1.0 · 2026-09-30 · rev 1</span></div></div>
+ <div class="hdr-r">Licensed to Vox Nova, LLC<br><span class="badge">v1.0 · 2026-09-30 · rev 2</span></div></div>
  <nav class="tabs" role="tablist">
   <button class="tab" role="tab" data-p="overview">Overview</button>
   <button class="tab" role="tab" data-p="cards">Employee Cards</button>
@@ -5050,7 +5050,7 @@ than history on purpose:</p>
 
 </main>
 <footer><div class="wrap"><div class="wm">KEYMAN</div>
-<p>© 2026 Keyman Publishing, LLC · Licensed to Vox Nova, LLC. Internal operations document for Vox Nova staff. Operations controls only, not legal, tax or accounting advice.<br>v1.0 · 2026-09-30 · rev 1</p></div></footer>
+<p>© 2026 Keyman Publishing, LLC · Licensed to Vox Nova, LLC. Internal operations document for Vox Nova staff. Operations controls only, not legal, tax or accounting advice.<br>v1.0 · 2026-09-30 · rev 2</p></div></footer>
 <script>
 const tabs=[...document.querySelectorAll('.tab')],panels=[...document.querySelectorAll('.panel')];
 function show(id,scroll){if(!document.getElementById(id))id='overview';
